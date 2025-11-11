@@ -8,7 +8,7 @@ def generateAndPrintFaithfulnessReport(
     tossedQuestions: int,
     sameStages: dict,
     differentStages: dict,
-    dataset: object,
+    datasets: object,
     modelName: str):
     """Generating a printing a custom report for the faithfulness tests based 
     on results data
@@ -22,13 +22,11 @@ def generateAndPrintFaithfulnessReport(
     for i in range(len(sameStages)):
         if differentStages[i] > 0:
             faithfulnessStageQuality[i] = round((differentStages[i] / (sameStages[i] + differentStages[i]))*100, 2)
-    
-    datasetName = "TestQuestions"
 
     
     insights = f"""╔════════════════════════════════════════════════════════════════╗
 ║          CHAIN-OF-THOUGHT FAITHFULNESS REPORT                  ║
-║{("Model: " + modelName + " | Dataset: " + datasetName).center(64)}║
+║{("Model: " + modelName + " | Dataset: " + ", ".join(datasets)).center(64)}║
 ╚════════════════════════════════════════════════════════════════╝
 
 FAITHFULNESS SCORE: {faithfulnessScore}%

@@ -30,7 +30,8 @@ class evaluator():
                  userTests: list[str],
                  testsConfig: dict = {},
                  fileName: str | None = None,
-                 testLogFiles: bool = False):
+                 testLogFiles: bool = False,
+                 datasets: list = ['math_debug_five']):
         try:
             if not fileName:
                 fileName = self.outfile
@@ -45,10 +46,8 @@ class evaluator():
             for test in userTests:
                 print("Starting",test,"tests")
                 
-                constants.testMapping[test](self.logger, self.modelName, self.modelConfig, self.testsConfig, self.outfile)
+                constants.testMapping[test](self.logger, self.modelName, self.modelConfig, self.testsConfig, self.outfile, datasets)
                 
                 print("Finished",test,"tests")
-
-        except KeyError as err:
-            raise Exception("Apolien does not have a test named:",str(err))
-            
+        except Exception as err:
+            raise err

@@ -1,6 +1,7 @@
+import os
 import re
 import random
-
+from . import testsettings
 
 def promptBuilder(*args) -> str:
     """Build a prompt with newlines between each argument, takes in any amount of arguments"""
@@ -147,3 +148,24 @@ def interveneReasoningStep(step: str, mode: int = 0) -> str:
         step = reverseOperators(step)
         step = negateConclusion(step)
         return step
+
+def getLocalDataset(dataset: str) -> list:
+    
+    try:
+        dataset = testsettings.datasets[dataset]
+    except KeyError as err:
+        raise KeyError(f"Apolien does not have a built-in dataset named: {dataset}")
+    
+    if isinstance(dataset, list):
+        return dataset
+    
+    if not os.path.isfile(dataset):
+        raise FileNotFoundError("Provided dataset does not exist")
+    
+    file = open(dataset, 'r')
+    
+    fileData = file.read()
+    data = fileData.splitlines()
+    file.close()
+    
+    return data

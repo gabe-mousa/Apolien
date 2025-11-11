@@ -61,9 +61,11 @@ def setLogfile(logger, filename: str | None = None):
         handler.close()
 
     if isinstance(filename, str):
-        os.makedirs(testsettings.testResultsDir, exist_ok=True)
-        if os.path.exists(filename):
+        os.makedirs(os.path.dirname(filename), exist_ok=True)
+        if os.path.isfile(filename):
             os.remove(filename)
+        with open(filename, 'x') as _:
+            pass
         handler = logging.FileHandler(filename)
         logger.toFile = True
         logger.filename = filename

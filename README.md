@@ -32,15 +32,18 @@ eval = apo.evaluator(
 
 eval.evaluate(
             userTests=['cot_faithfulness'],
-            testsConfig={},
-            loggingEnabled=False)
+            datasets=['simple_math_100', 'advanced_math_1000'],
+            loggingEnabled=False
+            )
 ```
 
 This example displays the use of primary purpose of this project, and how the other tests will be implemented in the future. 
 
 Instantiating an `evaluator` only requires the name of the model you will be testing. If you'd like you can define additional model parameters that ollama supports, via the `modelConfig`, which is shown above. You can also see the use of the `fileLogging` parameter. This enables logging test results in a file stored inside of a directory `testresults` as opposed to terminal (I highly recommend this). 
 
-The other function displayed is `evaluator.evaluate()`. This evaluate function performs any tests listed in `userTests` and that is its only required parameter. If you use the testsConfig this will be a way of passing in custom configurations for tests. The `testLogFiles` value determines whether or not to output conversations and results of all LLM conversation and prompting for each specific test. This will create a file under a `testresults` directory for each test. 
+The other function displayed is `evaluator.evaluate()`. This evaluate function performs any tests listed in `userTests` and that is its only required parameter, however it is recommended to also use the `datasets` parameter. More info on datasets is available below in Datasets.
+
+If you use the testsConfig this will be a way of passing in custom configurations for tests. The `testLogFiles` value determines whether or not to output conversations and results of all LLM conversation and prompting for each specific test. This will create a file under a `testresults` directory for each test. 
 
 You should also see in your terminal the following logs:
 * After instantiating an `evaluator()` object - `Apolien Initialized`
@@ -137,7 +140,7 @@ LLM RESPONSE QUALITY: 80.0%
 ```
 
 
-## Current Documentation
+## Documentation
 
 If you dig through the files, you will find that there are many functions and methods being used internally, and I have and will continue to try to expose some of those if you'd like to call those specifically. However this is the general implementation documentation and it's parameters. 
 
@@ -150,8 +153,23 @@ If you dig through the files, you will find that there are many functions and me
 * `evaluator.evaluate()`:
     * `userTests` - required, the list of tests to evaluate a given model. Current available tests are below:
         * `cot_faithfulness` - Chain-of-Thought Faithfulness. More information available in the Safety Tests Section
+    * `datasets` - optional (but recommended), the list of datasets you would like to evaluate
     * `testsConfig` - optional, any specific configurations for the model tests. Current avaliable configs are below: 
         * `cot_lookback` - How many reasoning steps back from the final reasoning step to intervene into. More information on this is available in the Safety Tests section.
     * `fileName` - optional, the name of the file with results from tests, default is results.log
     * `testLogFiles` - optional, if set to `True` it will create a file for each question in a dataset, and the interactions between the program and the LLM for that question. Generally used for debugging or curiosity. 
 
+## Datasets
+
+I have created a couple of datasets for processing and testing and would gladly encourage others to contribute to the repository if you have more datasets you would like to include. I am also working on implementation for passing in custom datasets in the function parameters for `evaluate()`
+
+Current Datasets:
+
+* `simple_math_20` - 20 simple math problems using basic arithmetic
+* `simple_math_100` - 100 simple math problems using basic arithmetic
+* `simple_math_1000` - 1000 simple math problems using basic arithmetic
+* `advanced_math_20` - 20 semi-advanced math problems of multiple operations using arithmetic and basic functions
+* `advanced_math_100` - 100 semi-advanced math problems of multiple operations using arithmetic and basic functions
+* `advanced_math_1000` - 1000 semi-advanced math problems of multiple operations using arithmetic and basic functions
+* `math_debug_one` - one basic arithmetic problem, used for debugging
+* `math_debug_five` - five relatively simple problems, default dataset and used for debugging
