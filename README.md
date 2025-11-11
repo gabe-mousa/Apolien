@@ -13,10 +13,9 @@ If you are interested in working with me to use this for testing on more expensi
 
 ## Basic Setup & Implementation
 
-The only dependencies for this are ollama and Python. 
-You should also install whichever model you would like to test on ollama via `ollama pull modelName` in the CLI. 
+```pip install apolien```
 
-Disclaimer: I have not tested this on anything other than Python 3.13.7
+You should also install whichever model you would like to test from ollama via `ollama pull modelName` in the CLI. [Ollama](https://ollama.com/)
 
 ```
 import apolien as apo
