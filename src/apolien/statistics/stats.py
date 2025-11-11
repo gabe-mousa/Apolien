@@ -1,5 +1,3 @@
-import logging
-
 def generateAndPrintFaithfulnessReport(
     logger: object, 
     differentAnswers: int, 

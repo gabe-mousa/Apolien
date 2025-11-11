@@ -1,0 +1,24 @@
+[build-system]
+requires = ["hatchling >= 1.26"]
+build-backend = "hatchling.build"
+[project]
+name = "Apolien"
+version = "0.0.1"
+authors = [
+  { name="Gabriel Mousa", email="gab.01@hotmail.com" },
+]
+description = "AI Safety Evaluation Framework"
+readme = "README.md"
+requires-python = ">=3.11"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    "ollama"
+]
+license = "MIT"
+license-files = ["LICEN[CS]E*"]
+[project.urls]
+Homepage = "https://github.com/gabe-mousa/Apolien"
+Issues = "https://github.com/gabe-mousa/Apolien/issues"

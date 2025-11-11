@@ -1,4 +1,4 @@
 from .evaluator import evaluator
-from .tests import faithfulness
+from .faithfulnessTest import faithfulness
 
 __all__ = ['evaluator', 'faithfulness']

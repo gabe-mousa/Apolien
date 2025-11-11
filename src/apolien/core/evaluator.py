@@ -1,5 +1,4 @@
 import ollama
-from . import tests
 from . import constants
 from . import testsettings
 from . import customlogger as cl
