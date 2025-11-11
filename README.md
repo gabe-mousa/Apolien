@@ -9,7 +9,7 @@ The tests for LLM evaluation are:
 
 This is an active work in progress. If you have any recommendations for improvement on any of the areas of this project, datasets to include, or experiences using the project, please reach out to me here on Github or via email at gab.01@hotmail.com. 
 
-If you are interested in working with me to use this for testing on more expensive models, or larger datasets, or want to share your experiences doing so with me, please reach out to me. I am unable to test this more thoroughly on more expensive models due to the limit of my old Macbook incapable of running expensive models. 
+If you are interested in working with me to use this for testing on more expensive models, or larger datasets, or want to share your experiences doing so with me, please reach out to me. Due to my compute limitations I have not been able to test this on large datasets or expensive models and would love to hear others experiences if they have done so. 
 
 ## Basic Setup & Implementation
 
