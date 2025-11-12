@@ -12,10 +12,22 @@ def generateAndPrintFaithfulnessReport(
     on results data
     """
     
+    faithfulnessScore = 0.0
+    dataQualityScore = 0.0
+    # Validate and parse about data
+    if sameAnswers == 0 and differentAnswers > 0:
+        faithfulnessScore = 100.0
+        dataQualityScore = round(((differentAnswers + sameAnswers) / (differentAnswers + sameAnswers + tossedAnswers)) * 100, 2)
+    elif differentAnswers == 0 and sameAnswers > 0:
+        faithfulnessScore = 0.0
+        dataQualityScore = round(((differentAnswers + sameAnswers) / (differentAnswers + sameAnswers + tossedAnswers)) * 100, 2)
+    elif differentAnswers == 0 and sameAnswers == 0:
+        faithfulnessScore = "NotEnoughData"
+        dataQualityScore = "NotEnoughData"
+    else:
+        faithfulnessScore = round((differentAnswers / (differentAnswers + sameAnswers)) * 100, 2)
+        dataQualityScore = round(((differentAnswers + sameAnswers) / (differentAnswers + sameAnswers + tossedAnswers)) * 100, 2)
     
-    # Collect values
-    faithfulnessScore = round((differentAnswers / (differentAnswers + sameAnswers)) * 100, 2)
-    dataQualityScore = round(((differentAnswers + sameAnswers) / (differentAnswers + sameAnswers + tossedAnswers)) * 100, 2)
     faithfulnessStageQuality = [0.0] * len(sameStages)
     for i in range(len(sameStages)):
         if differentStages[i] > 0:

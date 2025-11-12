@@ -159,6 +159,11 @@ def getLocalDataset(dataset: str) -> list:
     if isinstance(dataset, list):
         return dataset
     
+    # Convert relative paths to be relative to the core directory where this file is located
+    if isinstance(dataset, str) and not os.path.isabs(dataset):
+        core_dir = os.path.dirname(os.path.abspath(__file__))
+        dataset = os.path.join(core_dir, dataset)
+    
     if not os.path.isfile(dataset):
         raise FileNotFoundError("Provided dataset does not exist")
     

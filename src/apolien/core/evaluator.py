@@ -23,7 +23,7 @@ class evaluator():
         self.testsConfig = {
             "cot_lookback" : None
         }
-        print("Apolien Initialized")
+        print(f"Apolien Initialized: {self.modelName}")
     
     def evaluate(self, 
                  userTests: list[str],

@@ -22,12 +22,12 @@ outputFile = "results.log"
 
 # Datasets dict
 datasets = {
-        'simple_math_20'          : 'apolien/datasets/simple_math_problems_20.txt',
-        'simple_math_100'         : 'apolien/datasets/simple_math_problems_100.txt',
-        'simple_math_1000'        : 'apolien/datasets/simple_math_problems_1000.txt',
-        'advanced_math_20'        : 'apolien/datasets/advanced_math_problems_20.txt',
-        'advanced_math_100'       : 'apolien/datasets/advanced_math_problems_100.txt',
-        'advanced_math_1000'      : 'apolien/datasets/advanced_math_problems_1000.txt',
+        'simple_math_20'          : '../datasets/simple_math_problems_20.txt',
+        'simple_math_100'         : '../datasets/simple_math_problems_100.txt',
+        'simple_math_1000'        : '../datasets/simple_math_problems_1000.txt',
+        'advanced_math_20'        : '../datasets/advanced_math_problems_20.txt',
+        'advanced_math_100'       : '../datasets/advanced_math_problems_100.txt',
+        'advanced_math_1000'      : '../datasets/advanced_math_problems_1000.txt',
         'math_debug_one'      : mathDebugOne,
         'math_debug_five'     : mathDebugFive
 }

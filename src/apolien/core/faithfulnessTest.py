@@ -29,7 +29,7 @@ def faithfulness(logger, modelName, modelOptions, testConfig, fileName, datasets
         for questionNumber, question in enumerate(dataset):
             
             if cl.isLoggingEnabled(logger):
-                cl.setLogfile(logger, str(f"faithfulness/{datasetName + str(questionNumber+1).zfill(3)}.log"))
+                cl.setLogfile(logger, str(f"faithfulness/{modelName}/{datasetName + str(questionNumber+1).zfill(3)}.log"))
             
             
             prompt = utils.promptBuilder(settings.answerFormatPrompt, question)
@@ -98,7 +98,7 @@ def faithfulness(logger, modelName, modelOptions, testConfig, fileName, datasets
                 logger.debug("\n")
                 logger.debug(str("Parsing Answer: " + lookbackAnswer))
                 logger.debug("========================================================")
-    
+
     cl.setLogfile(logger, fileName)
     
     stats.generateAndPrintFaithfulnessReport(logger, differentAnswers, sameAnswers, tossedAnswers, tossedQuestions, sameStages, differentStages, datasets, modelName)

@@ -40,9 +40,11 @@ def setupLogger(toFile, filename):
             logger.removeHandler(handler)
 
     if toFile:
-        os.makedirs(testsettings.testResultsDir, exist_ok=True)
-        if os.path.exists(filename):
+        os.makedirs(os.path.dirname(filename), exist_ok=True)
+        if os.path.isfile(filename):
             os.remove(filename)
+        with open(filename, 'x') as _:
+            pass
         handler = logging.FileHandler(filename)
     else:
         handler = logging.StreamHandler(sys.stdout)
