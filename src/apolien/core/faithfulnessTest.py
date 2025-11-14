@@ -1,11 +1,10 @@
-import ollama
 from . import testsettings as settings
 from . import utils
 from . import customlogger as cl
 from ..statistics import stats
 from . import utils
 
-def faithfulness(logger, modelName, modelOptions, testConfig, fileName, datasets):
+def faithfulness(logger, modelName, modelOptions, testConfig, fileName, datasets, provider):
     try:
         lookback = testConfig['cot_lookback']
     except:
@@ -37,17 +36,17 @@ def faithfulness(logger, modelName, modelOptions, testConfig, fileName, datasets
             
             logger.debug(f"\nPrompt:\n{prompt}")
             
-            response = ollama.generate(
+            responseText = provider.generate(
                                         model=modelName,
                                         prompt=prompt,
-                                        options=modelOptions
+                                        config=modelOptions
                                     )
-            
-            reasoning = utils.parseResponseText(response['response'])
+
+            reasoning = utils.parseResponseText(responseText)
             reasoningSteps = reasoning["steps"]
             mainAnswer = reasoning['answer']
             
-            logger.debug(f"\nResponse:\n\n{response['response']}\n----------------------------Beginning CoT Analysis----------------------------\n\nParsed Steps and Answer:\n\n{reasoningSteps}\nAnswer: {mainAnswer}\n\n========================================================")
+            logger.debug(f"\nResponse:\n\n{responseText}\n----------------------------Beginning CoT Analysis----------------------------\n\nParsed Steps and Answer:\n\n{reasoningSteps}\nAnswer: {mainAnswer}\n\n========================================================")
             
             if not reasoningSteps or not mainAnswer or mainAnswer == "None":
                 tossedQuestions += 1
@@ -68,13 +67,13 @@ def faithfulness(logger, modelName, modelOptions, testConfig, fileName, datasets
                 steps[-1] = step
                 
                 reasoningPrompt = utils.promptBuilder(settings.continueFromReasoningFormatPrompt, question, steps)
-                reasoningResponse = ollama.generate(
+                reasoningResponseText = provider.generate(
                                                     model=modelName,
                                                     prompt=reasoningPrompt,
-                                                    options=modelOptions
+                                                    config=modelOptions
                                                     )
-                
-                lookbackAnswer = utils.parseAnswerString(reasoningResponse['response'])
+
+                lookbackAnswer = utils.parseAnswerString(reasoningResponseText)
                 
                 if not lookbackAnswer:
                     tossedAnswers += 1
@@ -86,7 +85,7 @@ def faithfulness(logger, modelName, modelOptions, testConfig, fileName, datasets
                     differentStages[int(i/(lookback/3))] += 1
                     differentAnswers += 1
                     
-                logger.debug(f"Prompt:\n\n{reasoningPrompt}\n\nResponse:\n\n{reasoningResponse['response']}\n\nParsing Answer: {lookbackAnswer}\n========================================================")
+                logger.debug(f"Prompt:\n\n{reasoningPrompt}\n\nResponse:\n\n{reasoningResponseText}\n\nParsing Answer: {lookbackAnswer}\n========================================================")
 
     cl.setLogfile(logger, fileName)
     

@@ -1,6 +1,6 @@
 # Apolien: AI Safety Evaluation Framework
 
-This project is meant to be used to evaluate AI Safety of different models. The current implementation uses 'ollama' for loading models locally (with dreams of integration on other methods in the future). 
+This project is meant to be used to evaluate AI Safety of different models. The current implementation supports both Ollama (for local models) and Anthropic Claude API (for cloud-based models). 
 
 The tests for LLM evaluation are:
 * Chain-of-Thought Faithfulness - `cot_faithfulness`
@@ -36,9 +36,50 @@ eval.evaluate(
             )
 ```
 
-This example displays the use of primary purpose of this project, and how the other tests will be implemented in the future. 
+This example displays the use of primary purpose of this project, and how the other tests will be implemented in the future.
 
-Instantiating an `evaluator` only requires the name of the model you will be testing. If you'd like you can define additional model parameters that ollama supports, via the `modelConfig`, which is shown above. You can also see the use of the `fileLogging` parameter. This enables logging test results in a file stored inside of a directory `testresults` as opposed to terminal (I highly recommend this). 
+Instantiating an `evaluator` only requires the name of the model you will be testing. If you'd like you can define additional model parameters that ollama supports, via the `modelConfig`, which is shown above. You can also see the use of the `fileLogging` parameter. This enables logging test results in a file stored inside of a directory `testresults` as opposed to terminal (I highly recommend this).
+
+## Using Claude API
+
+To use Anthropic's Claude models, set the `provider` parameter to `'claude'`:
+
+```python
+import apolien as apo
+import os
+
+# Set your API key as an environment variable
+os.environ['ANTHROPIC_API_KEY'] = 'your-api-key-here'
+
+# Or pass it directly to the evaluator
+eval_claude = apo.evaluator(
+    model="haiku",
+    modelConfig={
+        "temperature": 0.8,
+        "max_tokens": 4096
+    },
+    provider="claude",
+    api_key="your-api-key-here",  # Optional if ANTHROPIC_API_KEY is set
+    fileLogging=True
+)
+
+eval_claude.evaluate(
+    userTests=['cot_faithfulness'],
+    datasets=['simple_math_100'],
+    testLogFiles=False
+)
+```
+
+Available Claude models:
+[Claude Model Overview](https://docs.claude.com/en/docs/about-claude/models/overview#legacy-models)
+
+Configuration parameters for Claude:
+- `temperature` - Controls randomness (0-1)
+- `max_tokens` - Maximum tokens to generate (defaults to 4096)
+- `top_p` - Nucleus sampling parameter
+- `top_k` - Top-k sampling parameter
+
+See `examples/claude_example.py` for more usage examples. 
 
 The other function displayed is `evaluator.evaluate()`. This evaluate function performs any tests listed in `userTests` and that is its only required parameter, however it is recommended to also use the `datasets` parameter. More info on datasets is available below in Datasets.
 
@@ -143,12 +184,14 @@ LLM RESPONSE QUALITY: 80.0%
 
 If you dig through the files, you will find that there are many functions and methods being used internally, and I have and will continue to try to expose some of those if you'd like to call those specifically. However this is the general implementation documentation and it's parameters. 
 
-* `evaluator()`: 
-    * `model` - required, the name of the model in ollama
-    * `modelConfig` - optional, the ollama configuration for the model to be used in all the testing
+* `evaluator()`:
+    * `model` - required, the name of the model (e.g., 'llama3.2:1b' for Ollama or 'claude-3-5-sonnet-20241022' for Claude)
+    * `modelConfig` - optional, configuration parameters for the model to be used in all the testing
     * `statsConfig` - optional, currently unused but will be implemented for future statistics modeling
     * `fileLogging` - optional, whether the program will output logs to a file or to the terminal (true for output to file)
     * `fileName` - optional, the name of the file with results from tests, default is results.log
+    * `provider` - optional, LLM provider to use ('ollama' or 'claude'), defaults to 'ollama'
+    * `api_key` - optional, API key for the provider (required for Claude, uses ANTHROPIC_API_KEY env var if not provided)
 * `evaluator.evaluate()`:
     * `userTests` - required, the list of tests to evaluate a given model. Current available tests are below:
         * `cot_faithfulness` - Chain-of-Thought Faithfulness. More information available in the Safety Tests Section
