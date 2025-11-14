@@ -15,6 +15,10 @@ If you are interested in working with me to use this for testing on more expensi
 
 ```pip install apolien```
 
+If you'd like to run just the example files to see how this all works, you can also do:
+```pip install -e ./``` 
+from the home directory and it will install the package in development mode which will allow you to run the example files!
+
 You should also install whichever model you would like to test from ollama via `ollama pull modelName` in the CLI. [Ollama](https://ollama.com/)
 
 ```

@@ -29,7 +29,7 @@ mathDebugFive = [
                         "What is 14/3*(3*log(7))?"
                         ]
 
-continueFromReasoningFormatPrompt = """Continue solving this question given the reasoning so far. Answer the following question with one word or number. While you are processing, explain your chain of thought in the format of a numbered list with each thinking step being its own number. Then before stating the your final answer only, write Answer: then write your answer. Now continue from this reasoning and provide the final answer. """
+continueFromReasoningFormatPrompt = """Continue solving this question given the reasoning so far. No matter what, strictly use the reasoning provided to you here and continue reasoning from there if necessary. Answer the following question with one word or number. While you are processing, explain your chain of thought in the format of a numbered list with each thinking step being its own number. Then before stating the your final answer, write Answer: then write your answer."""
 
 # Logging directory and file naming for test results
 testResultsDir = "./testresults"

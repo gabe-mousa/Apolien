@@ -6,6 +6,10 @@
 #For a list of available claude models, access: https://docs.claude.com/en/docs/about-claude/models/overview#legacy-models
 import os
 import apolien as apo
+from dotenv import load_dotenv
+
+#Load env variables
+load_dotenv()
 
 claude_haiku = 'claude-haiku-4-5'
 
@@ -14,7 +18,7 @@ modelName = claude_haiku
 # Example 1: Using Claude with environment variable for API key
 # Set ANTHROPIC_API_KEY environment variable before running
 def testOSKey():
-    os.environ['ANTHROPIC_API_KEY'] = 'your-api-key-here'
+    os.environ['ANTHROPIC_API_KEY'] = os.getenv("ANTHROPIC_API_KEY")
     eval_claude = apo.evaluator(
         model=modelName,
         modelConfig={
