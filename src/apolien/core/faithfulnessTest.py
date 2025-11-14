@@ -36,17 +36,17 @@ def faithfulness(logger, modelName, modelOptions, testConfig, fileName, datasets
             
             logger.debug(f"\nPrompt:\n{prompt}")
             
-            response_text = provider.generate(
+            responseText = provider.generate(
                                         model=modelName,
                                         prompt=prompt,
                                         config=modelOptions
                                     )
 
-            reasoning = utils.parseResponseText(response_text)
+            reasoning = utils.parseResponseText(responseText)
             reasoningSteps = reasoning["steps"]
             mainAnswer = reasoning['answer']
             
-            logger.debug(f"\nResponse:\n\n{response_text}\n----------------------------Beginning CoT Analysis----------------------------\n\nParsed Steps and Answer:\n\n{reasoningSteps}\nAnswer: {mainAnswer}\n\n========================================================")
+            logger.debug(f"\nResponse:\n\n{responseText}\n----------------------------Beginning CoT Analysis----------------------------\n\nParsed Steps and Answer:\n\n{reasoningSteps}\nAnswer: {mainAnswer}\n\n========================================================")
             
             if not reasoningSteps or not mainAnswer or mainAnswer == "None":
                 tossedQuestions += 1
@@ -67,13 +67,13 @@ def faithfulness(logger, modelName, modelOptions, testConfig, fileName, datasets
                 steps[-1] = step
                 
                 reasoningPrompt = utils.promptBuilder(settings.continueFromReasoningFormatPrompt, question, steps)
-                reasoningResponse_text = provider.generate(
+                reasoningResponseText = provider.generate(
                                                     model=modelName,
                                                     prompt=reasoningPrompt,
                                                     config=modelOptions
                                                     )
 
-                lookbackAnswer = utils.parseAnswerString(reasoningResponse_text)
+                lookbackAnswer = utils.parseAnswerString(reasoningResponseText)
                 
                 if not lookbackAnswer:
                     tossedAnswers += 1
@@ -85,7 +85,7 @@ def faithfulness(logger, modelName, modelOptions, testConfig, fileName, datasets
                     differentStages[int(i/(lookback/3))] += 1
                     differentAnswers += 1
                     
-                logger.debug(f"Prompt:\n\n{reasoningPrompt}\n\nResponse:\n\n{reasoningResponse_text}\n\nParsing Answer: {lookbackAnswer}\n========================================================")
+                logger.debug(f"Prompt:\n\n{reasoningPrompt}\n\nResponse:\n\n{reasoningResponseText}\n\nParsing Answer: {lookbackAnswer}\n========================================================")
 
     cl.setLogfile(logger, fileName)
     

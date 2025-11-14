@@ -1,7 +1,7 @@
 from . import constants
 from . import testsettings
 from . import customlogger as cl
-from . import model_providers
+from . import modelProviders
 import logging
 
 class evaluator():
@@ -33,7 +33,7 @@ class evaluator():
         if api_key:
             provider_kwargs['api_key'] = api_key
 
-        self.provider = model_providers.get_provider(provider, **provider_kwargs)
+        self.provider = modelProviders.getProvider(provider, **provider_kwargs)
 
         # Validate the model name and configs
         self.provider.validate(model, modelConfig)

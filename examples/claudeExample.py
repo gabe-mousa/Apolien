@@ -1,4 +1,4 @@
-import apolien as apo
+import Apolien.src.apolien as apo
 import os
 
 # Example 1: Using Claude with environment variable for API key

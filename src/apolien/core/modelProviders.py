@@ -34,7 +34,7 @@ class ClaudeProvider():
             raise ValueError(f"Failed to validate Claude model '{model}': {str(e)}")
 
     def generate(self, model, prompt, config=None):
-        api_params = self._map_config(config)
+        api_params = self.mapConfig(config)
 
         if 'max_tokens' not in api_params:
             api_params['max_tokens'] = 4096
@@ -49,7 +49,7 @@ class ClaudeProvider():
         except Exception as e:
             raise RuntimeError(f"Failed to generate response from Claude: {str(e)}")
 
-    def _map_config(self, config):
+    def mapConfig(self, config):
         # Map Ollama config options to Claude API parameters
         if not config:
             return {}
@@ -78,12 +78,12 @@ class ClaudeProvider():
 
         return api_params
 
-def get_provider(provider_type, **kwargs):
-    provider_type = provider_type.lower()
+def getProvider(providerType, **kwargs):
+    providerType = providerType.lower()
 
-    if provider_type == 'ollama':
+    if providerType == 'ollama':
         return OllamaProvider()
-    elif provider_type in ['claude', 'anthropic']:
+    elif providerType in ['claude', 'anthropic']:
         return ClaudeProvider(**kwargs)
     else:
-        raise ValueError(f"Unsupported provider type: {provider_type}. Supported types: 'ollama', 'claude'")
+        raise ValueError(f"Unsupported provider type: {providerType}. Supported types: 'ollama', 'claude'")
