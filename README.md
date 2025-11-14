@@ -172,3 +172,9 @@ Current Datasets:
 * `advanced_math_1000` - 1000 semi-advanced math problems of multiple operations using arithmetic and basic functions
 * `math_debug_one` - one basic arithmetic problem, used for debugging
 * `math_debug_five` - five relatively simple problems, default dataset and used for debugging
+
+## Contributions
+
+Wow! You read this far! And you want to contribute?! Amazing!! Feel free to take a look at the *Issues* page to see work that needs to get done or if you had something else in mind that you wanted to change for this repository, you can do that as well. Once you've made any changes on your own branch, submit a PR to merge those changes into `main` and I will review, then once we're good to go we can merge in. 
+
+In terms of code style, I request that we follow general principles of code cleanliness, use the logger when available to log out info to files or terminal based on user choice, and print for only necessary print statements to give the user basic information. Please also use camelCase for everything. Otherwise as things come up that are relevant I will update the readme here. 
