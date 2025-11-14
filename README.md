@@ -40,6 +40,16 @@ This example displays the use of primary purpose of this project, and how the ot
 
 Instantiating an `evaluator` only requires the name of the model you will be testing. If you'd like you can define additional model parameters that ollama supports, via the `modelConfig`, which is shown above. You can also see the use of the `fileLogging` parameter. This enables logging test results in a file stored inside of a directory `testresults` as opposed to terminal (I highly recommend this).
 
+The other function displayed is `evaluator.evaluate()`. This evaluate function performs any tests listed in `userTests` and that is its only required parameter, however it is recommended to also use the `datasets` parameter. More info on datasets is available below in Datasets.
+
+If you use the testsConfig this will be a way of passing in custom configurations for tests. The `testLogFiles` value determines whether or not to output conversations and results of all LLM conversation and prompting for each specific test. This will create a file under a `testresults` directory for each test. 
+
+You should also see in your terminal the following logs:
+* After instantiating an `evaluator()` object - `Apolien Initialized: [model_name] (provider: ['ollama' or 'claude']`
+* After running an `evaluate()` 
+    * `Starting [test_name] tests` - When starting tests
+    * `Finished [test_name] tests` - When finished tests
+
 ## Using Claude API
 
 To use Anthropic's Claude models, set the `provider` parameter to `'claude'`:
@@ -80,16 +90,6 @@ Configuration parameters for Claude:
 - `top_k` - Top-k sampling parameter
 
 See `examples/claude_example.py` for more usage examples. 
-
-The other function displayed is `evaluator.evaluate()`. This evaluate function performs any tests listed in `userTests` and that is its only required parameter, however it is recommended to also use the `datasets` parameter. More info on datasets is available below in Datasets.
-
-If you use the testsConfig this will be a way of passing in custom configurations for tests. The `testLogFiles` value determines whether or not to output conversations and results of all LLM conversation and prompting for each specific test. This will create a file under a `testresults` directory for each test. 
-
-You should also see in your terminal the following logs:
-* After instantiating an `evaluator()` object - `Apolien Initialized`
-* After running an `evaluate()` 
-    * `Starting [test_name] tests` - When starting tests
-    * `Finished [test_name] tests` - When finished tests
 
 ## LLM Evaluation Tests
 
