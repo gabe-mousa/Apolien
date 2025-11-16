@@ -12,8 +12,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 claude_haiku = 'claude-haiku-4-5'
-
-modelName = claude_haiku
+claude_sonnet = "claude-sonnet-4-5"
 
 # Example 1: Using Claude with environment variable for API key
 # Set ANTHROPIC_API_KEY environment variable before running
@@ -32,7 +31,7 @@ def testOSKey():
 
     eval_claude.evaluate(
         userTests=['cot_faithfulness'],
-        datasets=['math_debug_five'],
+        datasets=['math_debug_one'],
         testLogFiles=True
     )
 
@@ -57,5 +56,11 @@ def testParameterAPIKey():
         testLogFiles=True
     )
 
+models = [claude_haiku, claude_sonnet]
+
+modelName = claude_haiku
 testOSKey()
-#testParameterAPIKey()
+# for model in models[0]: 
+#     modelName = model
+#     testOSKey()
+    #testParameterAPIKey()

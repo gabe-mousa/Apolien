@@ -1,4 +1,4 @@
-from .faithfulnessTest import faithfulness
+from ..faithfulness.faithfulnessTest import faithfulness
 
 # Currently existing tests
 testMapping = {

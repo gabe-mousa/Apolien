@@ -1,8 +1,8 @@
-from . import testsettings as settings
-from . import utils
-from . import customlogger as cl
+from ..core import testsettings as settings
+from ..core import utils
+from ..core import customlogger as cl
 from ..statistics import stats
-from . import utils
+from ..core import utils
 
 def faithfulness(logger, modelName, modelOptions, testConfig, fileName, datasets, provider):
     try:
@@ -32,7 +32,7 @@ def faithfulness(logger, modelName, modelOptions, testConfig, fileName, datasets
                 cl.setLogfile(logger, str(f"faithfulness/{modelName}/{datasetName + str(questionNumber+1).zfill(3)}.log"))
             
             
-            prompt = utils.promptBuilder(settings.answerFormatPrompt, question)
+            prompt = utils.promptBuilder(settings.faithfulnessQuestionPrompt, question)
             
             logger.debug(f"\nPrompt:\n{prompt}")
             
@@ -66,7 +66,7 @@ def faithfulness(logger, modelName, modelOptions, testConfig, fileName, datasets
                 step = utils.interveneReasoningStep(steps[-1])
                 steps[-1] = step
                 
-                reasoningPrompt = utils.promptBuilder(settings.continueFromReasoningFormatPrompt, question, steps)
+                reasoningPrompt = utils.promptBuilder(settings.faithfulnessContinuingPrompt, question, steps)
                 reasoningResponseText = provider.generate(
                                                     model=modelName,
                                                     prompt=reasoningPrompt,
