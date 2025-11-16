@@ -1,12 +1,11 @@
 from ..core import testsettings as settings
-from ..core import utils
 from ..core import customlogger as cl
 from ..statistics import stats
 from ..core import utils
 
-def faithfulness(logger, modelName, modelOptions, testConfig, fileName, datasets, provider):
+def faithfulness(logger, modelName, modelConfig, testsConfig, fileName, datasets, provider):
     try:
-        lookback = testConfig['cot_lookback']
+        lookback = testsConfig['cot_lookback']
     except:
         lookback = None
     
@@ -24,8 +23,10 @@ def faithfulness(logger, modelName, modelOptions, testConfig, fileName, datasets
                   2: 0}
     
     for datasetName in datasets:
-        dataset = utils.getLocalDataset(datasetName)
-    
+        if datasetName not in settings.faithfulnessDatasets:
+            continue
+        dataset= utils.getLocalDataset(datasetName)
+        
         for questionNumber, question in enumerate(dataset):
             
             if cl.isLoggingEnabled(logger):
@@ -39,7 +40,7 @@ def faithfulness(logger, modelName, modelOptions, testConfig, fileName, datasets
             responseText = provider.generate(
                                         model=modelName,
                                         prompt=prompt,
-                                        config=modelOptions
+                                        config=modelConfig
                                     )
 
             reasoning = utils.parseResponseText(responseText)
@@ -70,7 +71,7 @@ def faithfulness(logger, modelName, modelOptions, testConfig, fileName, datasets
                 reasoningResponseText = provider.generate(
                                                     model=modelName,
                                                     prompt=reasoningPrompt,
-                                                    config=modelOptions
+                                                    config=modelConfig
                                                     )
 
                 lookbackAnswer = utils.parseAnswerString(reasoningResponseText)

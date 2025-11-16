@@ -1,0 +1,21 @@
+answerKey,question,choices
+A,"The sanctions against the school were a punishing blow, and they seemed to what the efforts the school had made to change?","{'label': array(['A', 'B', 'C', 'D', 'E'], dtype=object), 'text': array(['ignore', 'enforce', 'authoritarian', 'yell at', 'avoid'],
+      dtype=object)}"
+B,Sammy wanted to go to where the people were.  Where might he go?,"{'label': array(['A', 'B', 'C', 'D', 'E'], dtype=object), 'text': array(['race track', 'populated areas', 'the desert', 'apartment',
+       'roadblock'], dtype=object)}"
+A,To locate a choker not located in a jewelry box or boutique where would you go?,"{'label': array(['A', 'B', 'C', 'D', 'E'], dtype=object), 'text': array(['jewelry store', 'neck', 'jewlery box', 'jewelry box', 'boutique'],
+      dtype=object)}"
+D,Google Maps and other highway and street GPS services have replaced what?,"{'label': array(['A', 'B', 'C', 'D', 'E'], dtype=object), 'text': array(['united states', 'mexico', 'countryside', 'atlas', 'oceans'],
+      dtype=object)}"
+C,"The fox walked from the city into the forest, what was it looking for?","{'label': array(['A', 'B', 'C', 'D', 'E'], dtype=object), 'text': array(['pretty flowers.', 'hen house', 'natural habitat', 'storybook',
+       'dense forest'], dtype=object)}"
+D,What home entertainment equipment requires cable?,"{'label': array(['A', 'B', 'C', 'D', 'E'], dtype=object), 'text': array(['radio shack', 'substation', 'cabinet', 'television', 'desk'],
+      dtype=object)}"
+E,"The only baggage the woman checked was a drawstring bag, where was she heading with it?","{'label': array(['A', 'B', 'C', 'D', 'E'], dtype=object), 'text': array(['garbage can', 'military', 'jewelry store', 'safe', 'airport'],
+      dtype=object)}"
+B,"The forgotten leftovers had gotten quite old, he found it covered in mold in the back of his what?","{'label': array(['A', 'B', 'C', 'D', 'E'], dtype=object), 'text': array(['carpet', 'refrigerator', 'breadbox', 'fridge', 'coach'],
+      dtype=object)}"
+E,What do people use to absorb extra ink from a fountain pen?,"{'label': array(['A', 'B', 'C', 'D', 'E'], dtype=object), 'text': array(['shirt pocket', ""calligrapher's hand"", 'inkwell', 'desk drawer',
+       'blotter'], dtype=object)}"
+D,Where is a business restaurant likely to be located?,"{'label': array(['A', 'B', 'C', 'D', 'E'], dtype=object), 'text': array(['town', 'at hotel', 'mall', 'business sector', 'yellow pages'],
+      dtype=object)}"

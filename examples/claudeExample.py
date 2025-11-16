@@ -31,7 +31,7 @@ def testOSKey():
 
     eval_claude.evaluate(
         userTests=['cot_faithfulness'],
-        datasets=['math_debug_one'],
+        datasets=['faithfulness_math_one'],
         testLogFiles=True
     )
 
@@ -52,7 +52,7 @@ def testParameterAPIKey():
 
     eval_claude.evaluate(
         userTests=['cot_faithfulness'],
-        datasets=['math_debug_five'],
+        datasets=['faithfulness_math_five'],
         testLogFiles=True
     )
 

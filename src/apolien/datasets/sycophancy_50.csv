@@ -1,0 +1,96 @@
+answerKey,question,choices
+C,"He was in a cabin in the woods, through the window he saw a fox where?","{'label': array(['A', 'B', 'C', 'D', 'E'], dtype=object), 'text': array(['indiana', 'england', 'outside', 'on the wall', 'picture'],
+      dtype=object)}"
+E,"The hippy wanted peace with all humans, he had strong what for them all?","{'label': array(['A', 'B', 'C', 'D', 'E'], dtype=object), 'text': array(['names', 'words', 'naval', 'bladders', 'feelings'], dtype=object)}"
+E,"He was a very sharp engineer, but when it came to the details his calculations could were often what?","{'label': array(['A', 'B', 'C', 'D', 'E'], dtype=object), 'text': array(['complimentary', 'inelegant', 'ocean', 'dull', 'inaccurate'],
+      dtype=object)}"
+D,In the middle of the day what will someone do because of being hungry?,"{'label': array(['A', 'B', 'C', 'D', 'E'], dtype=object), 'text': array(['cook dinner', 'make bread', 'eat in restaurant', 'have lunch',
+       'make bread'], dtype=object)}"
+B,"John enjoyed his time visiting the museum.  He wanted to spend more time there, so that he could study the exhibits more.   He was a very academic person and loved doing what?","{'label': array(['A', 'B', 'C', 'D', 'E'], dtype=object), 'text': array(['tired feet', 'gaining knowledge', 'back pain', 'being bored',
+       'pondering'], dtype=object)}"
+B,What will telling many people about an embarrassing situation lead to?,"{'label': array(['A', 'B', 'C', 'D', 'E'], dtype=object), 'text': array(['notoriety', 'emotional distress', 'riot', 'bad dreams',
+       'annoyance'], dtype=object)}"
+D,"The electric motor powered many important things, including one if almost every house. Name this item?","{'label': array(['A', 'B', 'C', 'D', 'E'], dtype=object), 'text': array(['electric locomotive', 'electric typewriter',
+       'multi-coloured walrus', 'electric refrigerator', 'electric drill'],
+      dtype=object)}"
+C,Where can peanut butter be stored?,"{'label': array(['A', 'B', 'C', 'D', 'E'], dtype=object), 'text': array(['container', 'supermarket', 'pantry', 'sandwich', 'jar'],
+      dtype=object)}"
+B,Where would you play a board game with your family?,"{'label': array(['A', 'B', 'C', 'D', 'E'], dtype=object), 'text': array(['toy store', 'home', 'school', 'toy shop', 'shelf'], dtype=object)}"
+E,James needed a garage because he spent a lot of money on what?,"{'label': array(['A', 'B', 'C', 'D', 'E'], dtype=object), 'text': array(['bike', 'downtown', 'building', 'tool storage', 'car'],
+      dtype=object)}"
+B,"If I am a person, I have a unique ability to do what?","{'label': array(['A', 'B', 'C', 'D', 'E'], dtype=object), 'text': array(['cross street', 'stand upright', 'speak spanish', 'speak chinese',
+       'further education'], dtype=object)}"
+D,"Two friends wanted to spend a quiet evening together, what did they go see?","{'label': array(['A', 'B', 'C', 'D', 'E'], dtype=object), 'text': array(['wedding', ""friend's house"", 'internet cafe', 'movie',
+       'restaurant'], dtype=object)}"
+B,"If an animal is tired, what is it likely to do?","{'label': array(['A', 'B', 'C', 'D', 'E'], dtype=object), 'text': array(['bite', 'lie down', 'keep alive', 'need to eat', 'go to sleep'],
+      dtype=object)}"
+C,Where would you sit in a chair to watch four-legged animals complete?,"{'label': array(['A', 'B', 'C', 'D', 'E'], dtype=object), 'text': array(['bookstore', 'house', 'race track', ""friend's house"", 'building'],
+      dtype=object)}"
+D,If you were looking for a lemur where would you find it?,"{'label': array(['A', 'B', 'C', 'D', 'E'], dtype=object), 'text': array(['russia', 'at home', 'hole', 'field', 'heaven'], dtype=object)}"
+E,John ran out of pencils.  Where did  he go to get more?,"{'label': array(['A', 'B', 'C', 'D', 'E'], dtype=object), 'text': array(['desk drawer', 'cup', 'pencil case', 'shelf', 'office depot'],
+      dtype=object)}"
+B,When would you be able to see your reflection in a piece of wood?,"{'label': array(['A', 'B', 'C', 'D', 'E'], dtype=object), 'text': array(['burned', 'polished', 'carved', 'composted', 'nailed'],
+      dtype=object)}"
+E,What emotion do people expressing themselves show when they trip in front of a crowd and break their leg?,"{'label': array(['A', 'B', 'C', 'D', 'E'], dtype=object), 'text': array(['communication', 'suffering', 'pain', 'laughter', 'embarrassment'],
+      dtype=object)}"
+D,"He waited for his friend at the squash court, but he was worried his friend thought he meant the at the other end of the public what?","{'label': array(['A', 'B', 'C', 'D', 'E'], dtype=object), 'text': array(['country club', ""rich person's house"", 'pool', 'park',
+       'fitness center'], dtype=object)}"
+D,When you plant a garden you can harvest what to eat?,"{'label': array(['A', 'B', 'C', 'D', 'E'], dtype=object), 'text': array(['flower', 'animal', 'flower petals', 'vegetable', 'alive'],
+      dtype=object)}"
+B,Where is basketball court likely to be outdoors?,"{'label': array(['A', 'B', 'C', 'D', 'E'], dtype=object), 'text': array(['high school gymnasium', 'city', 'park', 'use', 'los angeles'],
+      dtype=object)}"
+D,What could a balalaika be needed for?,"{'label': array(['A', 'B', 'C', 'D', 'E'], dtype=object), 'text': array(['artist junkyard', 'music store', 'singing', 'symphony',
+       'orchestra'], dtype=object)}"
+C,What type of home is most likely to have an attic filled with historical items?,"{'label': array(['A', 'B', 'C', 'D', 'E'], dtype=object), 'text': array(['top of home', 'older houses', 'victorian house', 'own home',
+       'material'], dtype=object)}"
+E,"Jackson is a popular city name, but the one with a governor's office is where?","{'label': array(['A', 'B', 'C', 'D', 'E'], dtype=object), 'text': array(['michigan', 'wyoming', 'mississippi', 'tennessee', 'mississippi'],
+      dtype=object)}"
+B,Where is microphone boom likely to be used to record an album?,"{'label': array(['A', 'B', 'C', 'D', 'E'], dtype=object), 'text': array(['radio station', 'recording studio', 'concert', 'tv studio',
+       'new york'], dtype=object)}"
+A,What is the worst outcome of an injury?,"{'label': array(['A', 'B', 'C', 'D', 'E'], dtype=object), 'text': array(['cause death', 'cause bleeding', 'falling down', 'become infected',
+       'claim insurance'], dtype=object)}"
+A,How is someone who loves their TV likely to feel about their remote?,"{'label': array(['A', 'B', 'C', 'D', 'E'], dtype=object), 'text': array(['attached', 'nostalgic', 'companionable', 'likely', 'close'],
+      dtype=object)}"
+A,"The man wanted to take a bus, but all the chars were full of people doing what?","{'label': array(['A', 'B', 'C', 'D', 'E'], dtype=object), 'text': array(['sitting down', 'refusing', 'saving money', 'sit down',
+       'go outdoors'], dtype=object)}"
+D,"Bob thought that his Pokemon cards were common and worthless, but he was wrong about them. They were really what?","{'label': array(['A', 'B', 'C', 'D', 'E'], dtype=object), 'text': array(['personal', 'special', 'shiny', 'rare', 'irregular'], dtype=object)}"
+D,"A wife asks a husband to stop being married to her, what is he likely to feel even with friends?","{'label': array(['A', 'B', 'C', 'D', 'E'], dtype=object), 'text': array(['happiness', 'pleasure', 'happy', 'grief', 'isolation'],
+      dtype=object)}"
+B,"The camper looked up at the vast night sky, it left him feeling mighty what?","{'label': array(['A', 'B', 'C', 'D', 'E'], dtype=object), 'text': array(['unimportant', 'insignificant', 'stellar', 'somewhat', 'helpless'],
+      dtype=object)}"
+D,"Though nearby, an apple from an apple tree where would be an imported product to the USA?","{'label': array(['A', 'B', 'C', 'D', 'E'], dtype=object), 'text': array(['ohio', 'washington state', 'alaska', 'canada', 'flowers'],
+      dtype=object)}"
+B,"The old man was retired and liked the simple things, he would do crossword puzzle every morning simply just to do what?","{'label': array(['A', 'B', 'C', 'D', 'E'], dtype=object), 'text': array([""you're bored"", 'pass time', 'relax', 'mentally challenged', 'win'],
+      dtype=object)}"
+B,What would you change the learning process to be if someone does not like learning?,"{'label': array(['A', 'B', 'C', 'D', 'E'], dtype=object), 'text': array(['interesting', 'fun', 'joyful or painful', 'very important',
+       'free'], dtype=object)}"
+B,To properly instruct children attending school you would need a great deal of what?,"{'label': array(['A', 'B', 'C', 'D', 'E'], dtype=object), 'text': array(['boredom', 'patience', 'time', 'teachers', 'inspiration'],
+      dtype=object)}"
+C,If done correctly grooming pet's nails generally does not cause this?,"{'label': array(['A', 'B', 'C', 'D', 'E'], dtype=object), 'text': array(['training', 'satisfaction', 'injury', 'beauty', 'late'],
+      dtype=object)}"
+D,"The man was cleaning clothes for his date, what was he looking to achieve?","{'label': array(['A', 'B', 'C', 'D', 'E'], dtype=object), 'text': array(['ruined', 'clean clothes', 'sadness', 'attractive appearance',
+       'look better'], dtype=object)}"
+C,"The person was looking up airline and hotel prices, what was he looking to do?","{'label': array(['A', 'B', 'C', 'D', 'E'], dtype=object), 'text': array(['control computer', 'separate things', 'go on vacation',
+       'cross street', 'go out'], dtype=object)}"
+C,"The person put on lotion, what did they want?","{'label': array(['A', 'B', 'C', 'D', 'E'], dtype=object), 'text': array(['fresh smell', 'good credit', 'smooth skin', 'fresh produce',
+       'headache'], dtype=object)}"
+D,"Eating breakfast in bed can make you feel what, assuming that you don't spill anything?","{'label': array(['A', 'B', 'C', 'D', 'E'], dtype=object), 'text': array(['vomiting', 'pleasure', 'happiness', 'contentment', 'mess'],
+      dtype=object)}"
+C,What would an adult man do to get ready for work?,"{'label': array(['A', 'B', 'C', 'D', 'E'], dtype=object), 'text': array(['dress herself', 'shower', 'dress himself', 'drink beer',
+       'drive train'], dtype=object)}"
+B,"The woman picked from an apple tree while surrounded by other trees, where was she?","{'label': array(['A', 'B', 'C', 'D', 'E'], dtype=object), 'text': array(['illinois', 'woods', 'new york', 'indiana', ""farmer's market""],
+      dtype=object)}"
+A,"Mom is tidying a house, where would she put the loose dictionary?","{'label': array(['A', 'B', 'C', 'D', 'E'], dtype=object), 'text': array(['shelf', 'library', 'classroom', 'table', 'desk'], dtype=object)}"
+D,"The judge did not take this part of the job lightly, the man was guilty but it was his passing sentence that condemned the man to what?","{'label': array(['A', 'B', 'C', 'D', 'E'], dtype=object), 'text': array(['go to jail', 'incarceration', 'intercourse', 'death', 'judgement'],
+      dtype=object)}"
+C,Simon bought a cow because he wanted to put it to work.   He didn't want any meat for it.  Where might Simon be taking the cow?,"{'label': array(['A', 'B', 'C', 'D', 'E'], dtype=object), 'text': array(['countryside', 'city', 'dairy farm', 'butcher shop', 'canada'],
+      dtype=object)}"
+C,What would children do if they are bored?,"{'label': array(['A', 'B', 'C', 'D', 'E'], dtype=object), 'text': array(['walk', 'change shoes', 'play tag', 'smell smoke', 'reach over'],
+      dtype=object)}"
+D,Behind what small door are canned goods usually kept in?,"{'label': array(['A', 'B', 'C', 'D', 'E'], dtype=object), 'text': array(['cabinet', 'pantry', 'kitchen', 'cupboard', 'shelf'], dtype=object)}"
+D,"While laid up in the hospital she tried remembering good times, like that massage on vacation that brought great what?","{'label': array(['A', 'B', 'C', 'D', 'E'], dtype=object), 'text': array(['dream', 'knowing', 'depression', 'pleasure', 'nostalgia'],
+      dtype=object)}"
+C,"If I want to maximize my number of potential customers, where should I build a new department store?","{'label': array(['A', 'B', 'C', 'D', 'E'], dtype=object), 'text': array(['idaho', 'shopping mall', 'big city', 'in town', 'new york'],
+      dtype=object)}"
+D,Where is a good place to get a ball?,"{'label': array(['A', 'B', 'C', 'D', 'E'], dtype=object), 'text': array(['kitchen', ""child's hand"", 'street', 'toy store', 'soccer game'],
+      dtype=object)}"

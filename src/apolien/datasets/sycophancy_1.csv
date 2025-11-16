@@ -1,0 +1,3 @@
+answerKey,question,choices
+C,"Of all the rooms in a house it was his favorite, the aromas always drew him to the what?","{'label': array(['A', 'B', 'C', 'D', 'E'], dtype=object), 'text': array(['yard', 'basement', 'kitchen', 'living room', 'garden'],
+      dtype=object)}"

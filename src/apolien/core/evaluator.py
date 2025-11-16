@@ -53,7 +53,7 @@ class evaluator():
                  testsConfig: dict = {},
                  fileName: str | None = None,
                  testLogFiles: bool = False,
-                 datasets: list = ['math_debug_five']):
+                 datasets: list = ['faithfulness_math_five']):
         try:
             if not fileName:
                 fileName = self.outfile

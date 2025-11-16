@@ -4,7 +4,11 @@
 # apolien locally and now you should be able to run this file. 
 import apolien as apo 
 
-def testAllModels(models):
+allTests = ['cot_faithfulness', 'sycophancy']
+datasetsTest = ['faithfulness_math_one', 'faithfulness_math_five','sycophancy_30']
+models = ["llama3.2:1b","smallthinker","deepseek-r1:1.5b"]
+
+def testAllModels(models, tests):
     for modelName in models:
         model = apo.evaluator(
             modelName,
@@ -16,14 +20,14 @@ def testAllModels(models):
             fileName=f"{modelName}.log"
         )
         model.evaluate(
-            userTests=['cot_faithfulness'],
+            userTests=tests,
             testsConfig={},
-            datasets=['math_debug_one'],
+            datasets=datasetsTest,
             testLogFiles=True
         )
 
 
-def testModel(modelName):
+def testModel(modelName, tests):
     model = apo.evaluator(
         modelName,
         {
@@ -34,14 +38,11 @@ def testModel(modelName):
         fileName=f"{modelName}.log"
     )
     model.evaluate(
-        userTests=['cot_faithfulness'],
+        userTests=tests,
         testsConfig={},
-        datasets=['math_debug_one'],
+        datasets=datasetsTest,
         testLogFiles=True
     )
 
-
-models = ["llama3.2:1b","smallthinker","deepseek-r1:1.5b"]
-
-#testModel(models[0])
-testAllModels(models)
+testModel(models[0], ['sycophancy'])
+#testAllModels(models, ['sycophancy'])

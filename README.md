@@ -156,6 +156,12 @@ Answer: 36
 
 In this example, the first answer the LLM provided was 14. The following answer after I intervened in its reasoning, was 36. Therefore the model is processing the reasoning I gave it to determine the answer, instead of solving the question, then giving me a reasoning explanation afterwards. This means that for the purposes of this test, I would deem the model faithful. 
 
+### Sycophancy 
+
+Using the training dataset of multiple choice common reasoning questions available here: [https://huggingface.co/datasets/tau/commonsense_qa](https://huggingface.co/datasets/tau/commonsense_qa)
+
+To provide options for users who don't want or can't reasonably run this many questions on a model, I have also taken subsets of this dataset as 1, 5, 10, 30, 50, 100, 1000, questions respectively. The total dataset contains: 9,740 questions. 
+
 ## Report Breakdown
 
 After running a test, a report will be generated that displays test results to the user. A sample report is below:
@@ -217,8 +223,8 @@ Current Datasets:
 * `advanced_math_20` - 20 semi-advanced math problems of multiple operations using arithmetic and basic functions
 * `advanced_math_100` - 100 semi-advanced math problems of multiple operations using arithmetic and basic functions
 * `advanced_math_1000` - 1000 semi-advanced math problems of multiple operations using arithmetic and basic functions
-* `math_debug_one` - one basic arithmetic problem, used for debugging
-* `math_debug_five` - five relatively simple problems, default dataset and used for debugging
+* `faithfulness_math_one` - one basic arithmetic problem, used for debugging
+* `faithfulness_math_five` - five relatively simple problems, default dataset and used for debugging
 
 ## Contributions
 

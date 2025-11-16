@@ -1,0 +1,187 @@
+answerKey,question,choices
+C,"She already had many friends, but she never stopped socialising to what?","{'label': array(['A', 'B', 'C', 'D', 'E'], dtype=object), 'text': array(['having fun', 'become popular', 'become more popular', 'anxiety',
+       'she cannot do that when all are for her .'], dtype=object)}"
+D,What do professors do to prove their points?,"{'label': array(['A', 'B', 'C', 'D', 'E'], dtype=object), 'text': array(['teach courses', 'show research', 'school students', 'state facts',
+       'master physics'], dtype=object)}"
+D,What happens if you trip while playing basketball?,"{'label': array(['A', 'B', 'C', 'D', 'E'], dtype=object), 'text': array(['sweat', 'dribbling', 'hurt yourself', 'fall down', 'make baskets'],
+      dtype=object)}"
+A,"Laura and Bob are a married couple who have begun reaching tentative agreement regarding their  sexual incompatibility.  They love each other and want to remain together, but have decided that they can see other people to fulfill their needs as long as they are honest about it.  Then entire negotiation is being done with a surprising amount of what given the subject matter?","{'label': array(['A', 'B', 'C', 'D', 'E'], dtype=object), 'text': array(['calmness', 'compromises', 'fucking', 'anger', 'satisfaction'],
+      dtype=object)}"
+D,Bob asked James to be an alibi witness for him but James is worried about committing perjury. He's afraid he'll be found out and he'll what?,"{'label': array(['A', 'B', 'C', 'D', 'E'], dtype=object), 'text': array(['shame', 'penalty', 'embarrassment', 'go to jail', 'indictment'],
+      dtype=object)}"
+D,What do you feel when you're not getting paid?,"{'label': array(['A', 'B', 'C', 'D', 'E'], dtype=object), 'text': array(['income tax', 'happiness', 'satisfaction', 'sorrow',
+       'blissfulness'], dtype=object)}"
+C,The senator had been going public with news about what was really going on in the govenor's office. What sort of situation did the bring around the governor?,"{'label': array(['A', 'B', 'C', 'D', 'E'], dtype=object), 'text': array(['shock', 'sorrow', 'controversy', 'fear', 'pain'], dtype=object)}"
+D,If you are starting a fire on purpose and are caught what will happen?,"{'label': array(['A', 'B', 'C', 'D', 'E'], dtype=object), 'text': array(['death', 'burns', 'warmth', 'go to jail', 'get a reward'],
+      dtype=object)}"
+C,What could cause you to be staying healthy?,"{'label': array(['A', 'B', 'C', 'D', 'E'], dtype=object), 'text': array(['saving money', 'long life', 'happiness', 'budget cuts', 'injury'],
+      dtype=object)}"
+D,"Some times I have trouble expressing myself, but I use clothing, sometimes even ugly clothing as a form of this.","{'label': array(['A', 'B', 'C', 'D', 'E'], dtype=object), 'text': array(['fun', 'fashion', 'pain', 'communication', 'embarrassment'],
+      dtype=object)}"
+B,Where is a safe space for a boat?,"{'label': array(['A', 'B', 'C', 'D', 'E'], dtype=object), 'text': array(['water', 'harbor', 'at sea', 'lake', 'ocean'], dtype=object)}"
+A,"Despite warnings to not do it while printing on printer, they still had an issue with people carelessly doing what near it?","{'label': array(['A', 'B', 'C', 'D', 'E'], dtype=object), 'text': array(['drink coffee', 'paper and ink', 'printer', 'error', 'using paper'],
+      dtype=object)}"
+C,Where could you see a single bee?,"{'label': array(['A', 'B', 'C', 'D', 'E'], dtype=object), 'text': array(['soft drink', 'swarm', 'countryside', 'apiary', 'united states'],
+      dtype=object)}"
+D,"The ticket booth informed riders that the train was running late, so where was the ticket booth located?","{'label': array(['A', 'B', 'C', 'D', 'E'], dtype=object), 'text': array(['movie theatre', 'sports arena', 'school', 'metro station',
+       'auditorium'], dtype=object)}"
+B,While resting what are you trying to achieve?,"{'label': array(['A', 'B', 'C', 'D', 'E'], dtype=object), 'text': array(['lazy', 'relaxation', 'falling asleep', 'feel better', 'laziness'],
+      dtype=object)}"
+E,Why would a person require a large amount of thinking?,"{'label': array(['A', 'B', 'C', 'D', 'E'], dtype=object), 'text': array(['fatigue', 'best way', 'new perspectives', 'depression',
+       'figure out'], dtype=object)}"
+C,Where can you see snakes at a public zoological park?,"{'label': array(['A', 'B', 'C', 'D', 'E'], dtype=object), 'text': array(['kew gardens', 'tree', 'terrarium', 'thick forest', 'field'],
+      dtype=object)}"
+A,What happens with not enough drinking?,"{'label': array(['A', 'B', 'C', 'D', 'E'], dtype=object), 'text': array(['headaches', 'sickness', 'hydration', 'vomiting', 'thirst'],
+      dtype=object)}"
+B,Jealousy is not uncommon when to people do what with each other?,"{'label': array(['A', 'B', 'C', 'D', 'E'], dtype=object), 'text': array(['wage war', 'compete', 'destroy relationship', 'compete', 'judge'],
+      dtype=object)}"
+C,"The terrace was ornate and artfully laid out, what kind of firm created it?","{'label': array(['A', 'B', 'C', 'D', 'E'], dtype=object), 'text': array(['rice paddy', 'financial firm', 'architecture', 'michigan',
+       'house'], dtype=object)}"
+C,"What will eventually happen someone who is committing murder, even if he or she is not caught?","{'label': array(['A', 'B', 'C', 'D', 'E'], dtype=object), 'text': array(['ocean', 'fear', 'own death', 'imprisonment', 'incarceration'],
+      dtype=object)}"
+E,"James went to outer space for the first time.  He packed everything, including his peanut butter, into a single object.  Where might his things be?","{'label': array(['A', 'B', 'C', 'D', 'E'], dtype=object), 'text': array(['universe', 'jar', 'box', 'closet', 'suitcase'], dtype=object)}"
+A,Where would a soprano sing live for money?,"{'label': array(['A', 'B', 'C', 'D', 'E'], dtype=object), 'text': array(['opera house', 'movie', 'choit', 'theater', 'choir'], dtype=object)}"
+D,How could being someones taxi for the day while they run errands be good for the world?,"{'label': array(['A', 'B', 'C', 'D', 'E'], dtype=object), 'text': array(['gain', 'supplies', 'helpful', 'help people', 'add to'],
+      dtype=object)}"
+E,"He brought his wallet with him, this was because buying products means what?","{'label': array(['A', 'B', 'C', 'D', 'E'], dtype=object), 'text': array(['debt', 'agony', 'pleasure', 'wealth', 'spending money'],
+      dtype=object)}"
+E,What would happen to a person if he or she fell down and broke his or her leg?,"{'label': array(['A', 'B', 'C', 'D', 'E'], dtype=object), 'text': array(['get cast', 'try to learn', 'feel proud', 'catch cold',
+       'need assistance'], dtype=object)}"
+C,"The spout was producing hardly a dribble, so fearing germs he began to look for another what?","{'label': array(['A', 'B', 'C', 'D', 'E'], dtype=object), 'text': array(['kettle', 'teapot', 'water fountain', 'garage', 'gasoline can'],
+      dtype=object)}"
+D,James hated baseball. Seeing people play a game wasn't fun to him. It only filled him with what?,"{'label': array(['A', 'B', 'C', 'D', 'E'], dtype=object), 'text': array(['longing', 'enjoyable', 'grief', 'boredom', 'stress'], dtype=object)}"
+E,Why would someone not know where he or she left something after getting drunk?,"{'label': array(['A', 'B', 'C', 'D', 'E'], dtype=object), 'text': array(['stumbling', 'hangover', 'confusion', 'pass out', 'forgetfulness'],
+      dtype=object)}"
+B,What accused of committing a murder what is a person facing?,"{'label': array(['A', 'B', 'C', 'D', 'E'], dtype=object), 'text': array(['feeling of guilt', 'jail time', 'being rewarded', 'fear',
+       'going to prison'], dtype=object)}"
+A,"When you buy something new , what do you read for information?","{'label': array(['A', 'B', 'C', 'D', 'E'], dtype=object), 'text': array(['manual', 'online', 'book', 'pamphlet', 'meeting'], dtype=object)}"
+E,What causes hard breathing when you are sick,"{'label': array(['A', 'B', 'C', 'D', 'E'], dtype=object), 'text': array(['live', 'sigh', 'blood', 'respiration', 'cough'], dtype=object)}"
+E,What is a child's reaction likely to be when going to play?,"{'label': array(['A', 'B', 'C', 'D', 'E'], dtype=object), 'text': array(['happiness', 'meet', 'surprised', 'being entertained', 'happy'],
+      dtype=object)}"
+E,Where do you put a cardboard box that is damaged beyond use?,"{'label': array(['A', 'B', 'C', 'D', 'E'], dtype=object), 'text': array(['warehouse', 'post office', 'food', 'garage', 'trash'],
+      dtype=object)}"
+A,"God is often depicted as omnipotent, he can do what?","{'label': array(['A', 'B', 'C', 'D', 'E'], dtype=object), 'text': array(['anything', 'give peace', 'judge men', 'home', 'everywhere'],
+      dtype=object)}"
+E,"If a reception is held near a golf course, what is the likely venue?","{'label': array(['A', 'B', 'C', 'D', 'E'], dtype=object), 'text': array(['large room', 'golf cart', 'lobby', 'church basement',
+       'country club'], dtype=object)}"
+B,Southern is the opposite of what?,"{'label': array(['A', 'B', 'C', 'D', 'E'], dtype=object), 'text': array(['southernwort', 'northern', 'northern', 'boreal', 'septentrional'],
+      dtype=object)}"
+D,"If one needed peas and shopped local, where might they go?","{'label': array(['A', 'B', 'C', 'D', 'E'], dtype=object), 'text': array(['supermarket', 'fridge', 'grocery store', ""farmer's market"",
+       'freezer'], dtype=object)}"
+C,"The old lady wanted to purchase a can of paint, the helpful employee got it for her off the what?","{'label': array(['A', 'B', 'C', 'D', 'E'], dtype=object), 'text': array(['wall', 'hardware store', 'shelf', 'paintbrush', 'windowsill'],
+      dtype=object)}"
+B,"The deep fryers used gallons and gallons of oil a week, the location was the busiest what in town?","{'label': array(['A', 'B', 'C', 'D', 'E'], dtype=object), 'text': array(['service station', 'restaurant', 'street', 'ground',
+       'auto parts store'], dtype=object)}"
+B,"When people are learning about science and not burdened by the morals of a higher power, they are more likely to come up with what?","{'label': array(['A', 'B', 'C', 'D', 'E'], dtype=object), 'text': array(['experiment', 'new ideas', 'scientific knowledge', 'enlightened',
+       'atheism'], dtype=object)}"
+B,"Bob wants to talk, but he's surrounded by gnats and he thinks they're gross.   No one can hear him because refuses to do what?","{'label': array(['A', 'B', 'C', 'D', 'E'], dtype=object), 'text': array(['will listen', 'open mouth', 'speak up', 'express opinions',
+       'make sound'], dtype=object)}"
+B,What does a head attach to?,"{'label': array(['A', 'B', 'C', 'D', 'E'], dtype=object), 'text': array(['submarine', 'human body', 'ship', 'neck', 'morgue'], dtype=object)}"
+B,What do I say when I am meeting people for the first time?,"{'label': array(['A', 'B', 'C', 'D', 'E'], dtype=object), 'text': array(['hugging', 'introducing yourself', 'making friends', 'smiling',
+       'shake hands'], dtype=object)}"
+E,What would contain an image of a blowfish?,"{'label': array(['A', 'B', 'C', 'D', 'E'], dtype=object), 'text': array(['google', 'coral reef', 'palm tree', 'fish market', 'books'],
+      dtype=object)}"
+C,Where would you put your change if you will not need to use it soon?,"{'label': array(['A', 'B', 'C', 'D', 'E'], dtype=object), 'text': array(['purse', 'slot machine', 'jar', 'pocket', 'casino'], dtype=object)}"
+C,"The band was performing live, but if you looked close enough you'd realize the sound was previously what?","{'label': array(['A', 'B', 'C', 'D', 'E'], dtype=object), 'text': array(['animated', 'broadcast', 'recorded', 'mixed', 'neutral'],
+      dtype=object)}"
+A,Why do most people engage in chatting with friends?,"{'label': array(['A', 'B', 'C', 'D', 'E'], dtype=object), 'text': array(['fun', 'love', 'answers', 'inspiration', 'relaxation'],
+      dtype=object)}"
+A,The graveyard is usually found on the outskirts of what group of homes and businesses?,"{'label': array(['A', 'B', 'C', 'D', 'E'], dtype=object), 'text': array(['city', 'arlington', 'church property', 'every town', 'city'],
+      dtype=object)}"
+D,If you learn more about your weakest subjects you'll have done what to yourself?,"{'label': array(['A', 'B', 'C', 'D', 'E'], dtype=object), 'text': array(['have more knowledge', 'become knowledgeable', 'have tools',
+       'improve yourself', 'read'], dtype=object)}"
+B,Before we are able to run what do we need to know how to do?,"{'label': array(['A', 'B', 'C', 'D', 'E'], dtype=object), 'text': array(['act quickly', 'learn to walk', 'stretches', 'buy shoes',
+       'go quickly'], dtype=object)}"
+B,"The investor seemed shady, he kept insisting his client had to spend money to what?","{'label': array(['A', 'B', 'C', 'D', 'E'], dtype=object), 'text': array(['obtain money', 'make money', 'go shopping', 'buy things',
+       'steal money'], dtype=object)}"
+C,"If someone is talent but doesn't like performing, they probably suffer from what?","{'label': array(['A', 'B', 'C', 'D', 'E'], dtype=object), 'text': array(['injury',
+       'talent persons cannot suffer from injury and butterflies',
+       'anxiety', 'happiness', 'energetic'], dtype=object)}"
+E,"If I want to make my cup of water colder, how would I go about it?","{'label': array(['A', 'B', 'C', 'D', 'E'], dtype=object), 'text': array(['liquid nitrogen', 'steam room', 'tidal waves', 'ocean',
+       'crushed ice'], dtype=object)}"
+B,While in a zoological park where would you find a bald eagle?,"{'label': array(['A', 'B', 'C', 'D', 'E'], dtype=object), 'text': array(['painting', 'aviary', 'the aquarium', 'in washington',
+       'rural area'], dtype=object)}"
+A,When in a serious relationship understanding better requires what?,"{'label': array(['A', 'B', 'C', 'D', 'E'], dtype=object), 'text': array(['effort', 'consistency', 'thinking', 'time', 'knowledge of'],
+      dtype=object)}"
+C,"The shark kept bumping into piers and couldn't seem to get out into open water, where was it stuck?","{'label': array(['A', 'B', 'C', 'D', 'E'], dtype=object), 'text': array(['television show', 'pacific ocean', 'san francisco bay',
+       'new england', 'gulf of mexico'], dtype=object)}"
+B,Where would someone have to carry their brass instrument while they played?,"{'label': array(['A', 'B', 'C', 'D', 'E'], dtype=object), 'text': array(['punk rock band', 'marching band', 'brass band', 'annoy mom',
+       'jazz band'], dtype=object)}"
+D,"The man was bad at getting a job because of his poor references, what did he need to work on being?","{'label': array(['A', 'B', 'C', 'D', 'E'], dtype=object), 'text': array(['famous', 'sufficient', 'benevolent', 'reputable', 'first class'],
+      dtype=object)}"
+A,"John heard a language that he could not understand. He thought that the door was shut, but he eventually realized that there was no door, and that the light source that was blinding his eyes was very familiar.  He was on his back looking at what?","{'label': array(['A', 'B', 'C', 'D', 'E'], dtype=object), 'text': array(['sky', 'lamp', 'hallway', 'dard', 'closed room'], dtype=object)}"
+B,Simon was meeting Jane that afternoon.  This meant that he needed to be finished with his project by when?,"{'label': array(['A', 'B', 'C', 'D', 'E'], dtype=object), 'text': array(['evening', 'before lunch', 'after', 'morning', 'after'],
+      dtype=object)}"
+D,It is a well known adage that you should not mix business with what?,"{'label': array(['A', 'B', 'C', 'D', 'E'], dtype=object), 'text': array(['fun', 'nonprofit', 'art', 'pleasure', 'personal'], dtype=object)}"
+E,"Them two going out for coffee could be expensive, so she just had it over at her what?","{'label': array(['A', 'B', 'C', 'D', 'E'], dtype=object), 'text': array([""parent's house"", 'grocery store', 'internet cafe',
+       'fast food restaurant', ""friend's house""], dtype=object)}"
+A,John wanted a silo home.  He did this because it's cheaper to heat and cool.  What insulates a silo home?,"{'label': array(['A', 'B', 'C', 'D', 'E'], dtype=object), 'text': array(['surface of earth', 'residential area', 'suburbs', 'city', 'tires'],
+      dtype=object)}"
+D,Where does a human not often go?,"{'label': array(['A', 'B', 'C', 'D', 'E'], dtype=object), 'text': array(['bus', 'apartment building', 'space shuttle', 'solar system',
+       'inside earth'], dtype=object)}"
+D,What is moving cars without looking likely to result in?,"{'label': array(['A', 'B', 'C', 'D', 'E'], dtype=object), 'text': array(['driving', 'getting tired', 'traffic', 'accidents', 'ticket'],
+      dtype=object)}"
+D,what do you extend to have a bigger back yard?,"{'label': array(['A', 'B', 'C', 'D', 'E'], dtype=object), 'text': array(['suburb', 'back of house', 'forest', 'property', 'neighborhood'],
+      dtype=object)}"
+C,Where would you need a ladder to eat?,"{'label': array(['A', 'B', 'C', 'D', 'E'], dtype=object), 'text': array(['garage', 'hardware store', 'apple orchard', 'couch',
+       'climbing to higher level'], dtype=object)}"
+C,"Bill wants to make a fortune while sailing in the Caribbean, what should he look for?","{'label': array(['A', 'B', 'C', 'D', 'E'], dtype=object), 'text': array(['bank', 'stock market', 'treasure chest', 'bag of cash',
+       'real estate'], dtype=object)}"
+A,Where is a good place to keep a wagon meant for work?,"{'label': array(['A', 'B', 'C', 'D', 'E'], dtype=object), 'text': array(['garage', 'kitchen cabinet', 'backyard', 'field', 'toy store'],
+      dtype=object)}"
+B,"Dan was living on his own in a big city.   He was okay with his situation, and enjoyed all the fun things to do, but he was still searching for something. What was he searching for?","{'label': array(['A', 'B', 'C', 'D', 'E'], dtype=object), 'text': array(['the mafia', 'happiness', 'death', 'pollution', 'have experiences'],
+      dtype=object)}"
+C,"James uses television l;ate in the day, after work.  It does so because his work is hard and he wants to be what?","{'label': array(['A', 'B', 'C', 'D', 'E'], dtype=object), 'text': array(['laziness', 'falling asleep', 'entertained', 'visual',
+       'conformity'], dtype=object)}"
+A,"The physiologist identified a bone, what were they looking at?","{'label': array(['A', 'B', 'C', 'D', 'E'], dtype=object), 'text': array(['skeleton', 'vertebrates', 'fossil', 'fresh fish', ""dog's mouth""],
+      dtype=object)}"
+E,What's a good solution for being bored?,"{'label': array(['A', 'B', 'C', 'D', 'E'], dtype=object), 'text': array(['use television', 'entertain', 'read a book', 'play chess',
+       'go somewhere'], dtype=object)}"
+D,A reaching advantage can help a boxer achieve what?,"{'label': array(['A', 'B', 'C', 'D', 'E'], dtype=object), 'text': array(['being ahead', 'fall', 'speed.', 'victory', 'new option'],
+      dtype=object)}"
+E,John noticed a plate flanked by silverware set aside for him.  Where was this plate?,"{'label': array(['A', 'B', 'C', 'D', 'E'], dtype=object), 'text': array(['resturant', 'in a train', 'kitchen', 'restaurant', 'table'],
+      dtype=object)}"
+C,Where might someone go after dealing with a passing sentence?,"{'label': array(['A', 'B', 'C', 'D', 'E'], dtype=object), 'text': array(['death', 'grief', 'appeals', 'anger', 'grammar'], dtype=object)}"
+D,"He knew how to make bread, but he said ""I don't have all day because what""?","{'label': array(['A', 'B', 'C', 'D', 'E'], dtype=object), 'text': array(['baking is hard', 'eat bread', 'fresher', ""i'm hungry"",
+       ""it's sooooooo yummy""], dtype=object)}"
+C,What is the result of kissing often?,"{'label': array(['A', 'B', 'C', 'D', 'E'], dtype=object), 'text': array(['arousal', 'pleasurable', 'being happy', 'feeling good',
+       'sexual excitement'], dtype=object)}"
+E,You might find a marmoset in a South American protected what?,"{'label': array(['A', 'B', 'C', 'D', 'E'], dtype=object), 'text': array(['zoo', 'burrow', 'american west', 'in wild', 'national park'],
+      dtype=object)}"
+D,What is a place where the ceiling is usually closer to the floor than in other areas?,"{'label': array(['A', 'B', 'C', 'D', 'E'], dtype=object), 'text': array(['attic', 'building', 'chapel', 'loft', 'classroom'], dtype=object)}"
+E,What is remembering ever answer on a test likely to show?,"{'label': array(['A', 'B', 'C', 'D', 'E'], dtype=object), 'text': array(['nostalgia', 'depression', 'problems', 'instruction', 'knowledge'],
+      dtype=object)}"
+D,When is a garden the most beautiful?,"{'label': array(['A', 'B', 'C', 'D', 'E'], dtype=object), 'text': array(['backyard', 'own yard', 'full of mud', 'full bloom', 'back yard'],
+      dtype=object)}"
+D,What do you feel when successful when competing against a worthy adversary.,"{'label': array(['A', 'B', 'C', 'D', 'E'], dtype=object), 'text': array(['encouraging', 'one winner', 'injury', 'pride', 'proud'],
+      dtype=object)}"
+D,"Bailey saw something scary in the entrance hall,  but closer examination showed that it was just a what?","{'label': array(['A', 'B', 'C', 'D', 'E'], dtype=object), 'text': array(['bathroom', 'palace', 'house', 'person', 'school'], dtype=object)}"
+C,"He liked his indoor ficus, he simply had to keep it watered and near a what?","{'label': array(['A', 'B', 'C', 'D', 'E'], dtype=object), 'text': array(['tropical forest', 'ecosphere', 'sunny window', 'sun',
+       'tropical rainforest'], dtype=object)}"
+B,John wasn't in his right mind.  His brain did what to him?,"{'label': array(['A', 'B', 'C', 'D', 'E'], dtype=object), 'text': array(['tended', 'play tricks on', 'picture experience', 'form images',
+       'manual'], dtype=object)}"
+D,Where are you normally when you take a bath?,"{'label': array(['A', 'B', 'C', 'D', 'E'], dtype=object), 'text': array(['greece', 'hotel room', 'clothing store', 'own home', 'house'],
+      dtype=object)}"
+B,"While in the process of heading home he realized at the last moment he hadn't gotten a souvenir from the trip, luckily the what had a gift shop?","{'label': array(['A', 'B', 'C', 'D', 'E'], dtype=object), 'text': array(['museum', 'airport', 'hotel', 'shop', 'disneyland'], dtype=object)}"
+C,"I have a machine for making bread, I keep it in my what?","{'label': array(['A', 'B', 'C', 'D', 'E'], dtype=object), 'text': array(['laboratory', 'bathroom', 'house', 'museum', 'industrial area'],
+      dtype=object)}"
+E,What can ice help you to do?,"{'label': array(['A', 'B', 'C', 'D', 'E'], dtype=object), 'text': array(['melt', 'make sugar', 'become water', 'form crystals', 'cool off'],
+      dtype=object)}"
+A,Where do people keep money that is not in their wallet?,"{'label': array(['A', 'B', 'C', 'D', 'E'], dtype=object), 'text': array(['bank account', 'outside', 'art show', 'casino', 'race track'],
+      dtype=object)}"
+A,The players got chills and goosebumps as the went through the central passage into the what?,"{'label': array(['A', 'B', 'C', 'D', 'E'], dtype=object), 'text': array(['arena', 'tomb', 'water', 'public building',
+       'connecting two different locations'], dtype=object)}"
+E,The baboon is a species of monkey native to where?,"{'label': array(['A', 'B', 'C', 'D', 'E'], dtype=object), 'text': array(['amazon basin', 'rain forest', 'zoological gardens', 'jungle',
+       'african continent'], dtype=object)}"
+B,What do people typically do when they are trying to making friends?,"{'label': array(['A', 'B', 'C', 'D', 'E'], dtype=object), 'text': array(['falling in love', 'smile', 'start fighting', 'getting drunk',
+       'talking'], dtype=object)}"
+D,"He felt pride when he saw his team walk out and when he sized op the opposing team, what was he about to do?","{'label': array(['A', 'B', 'C', 'D', 'E'], dtype=object), 'text': array(['pass class', 'paint house', 'improve yourself', 'compete against',
+       'hopscotch'], dtype=object)}"
+A,"The show was live,  and there was no tape delay.  The station decided that they weren't going to have any censorship, and would remain what regarding the issues?","{'label': array(['A', 'B', 'C', 'D', 'E'], dtype=object), 'text': array(['neutral', 'animated', 'broadcast', 'biased', 'recorded'],
+      dtype=object)}"
+B,Why does someone want to get warm when they are cold?,"{'label': array(['A', 'B', 'C', 'D', 'E'], dtype=object), 'text': array(['to do somersaults', 'feel comfortable', ""you're cold"",
+       'were cold', 'more comfortable'], dtype=object)}"
+B,John sat in a folding chair in a bit room with a stage.  What sort of room could that be?,"{'label': array(['A', 'B', 'C', 'D', 'E'], dtype=object), 'text': array(['room', 'auditorium', 'meeting hall', 'school', 'church'],
+      dtype=object)}"
+C,"When you dont want something, you do what to it?","{'label': array(['A', 'B', 'C', 'D', 'E'], dtype=object), 'text': array(['stockpile', 'refuse', 'reject', 'negative', 'detest'],
+      dtype=object)}"

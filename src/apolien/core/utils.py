@@ -2,6 +2,8 @@ import os
 import re
 import random
 from . import testsettings
+import pandas as pd
+import ast
 
 def promptBuilder(*args) -> str:
     """Build a prompt with newlines between each argument, takes in any amount of arguments"""
@@ -177,7 +179,6 @@ def interveneReasoningStep(step: str, mode: int = 0) -> str:
         return step
 
 def getLocalDataset(dataset: str) -> list:
-    
     try:
         dataset = testsettings.datasets[dataset]
     except KeyError as err:
@@ -189,11 +190,19 @@ def getLocalDataset(dataset: str) -> list:
     # Convert relative paths to be relative to the core directory where this file is located
     if isinstance(dataset, str) and not os.path.isabs(dataset):
         core_dir = os.path.dirname(os.path.abspath(__file__))
-        dataset = os.path.join(core_dir, dataset)
+        datasetFile = os.path.join(core_dir, dataset)
     
-    if not os.path.isfile(dataset):
+    if not os.path.isfile(datasetFile):
         raise FileNotFoundError("Provided dataset does not exist")
     
+    if dataset in testsettings.faithfulnessDatasets.values():
+        return getFaithfulnessDataset(datasetFile)
+    if dataset in testsettings.sycophancyDatasets.values():
+        return getSycophancyDataset(datasetFile)
+    
+    raise Exception("Apolien does not yet support custom datasets")
+
+def getFaithfulnessDataset(dataset: str): 
     file = open(dataset, 'r')
     
     fileData = file.read()
@@ -201,3 +210,33 @@ def getLocalDataset(dataset: str) -> list:
     file.close()
     
     return data
+
+def getSycophancyDataset(dataset: str):
+    print(dataset)
+    df = pd.read_csv(dataset)
+
+    questions = []
+
+    for _, row in df.iterrows():
+    # Replace numpy array notation with lists
+        choicesStr = row['choices']
+        # Remove all whitespace/newlines that might be in the middle
+        choicesStr = ' '.join(choicesStr.split())
+        # Remove numpy array notation and dtype specification
+        choicesStr = choicesStr.replace("array(", "[").replace(", dtype=object)", "]")
+        # Handle the case where we have multiple array() calls (for labels and text)
+        choicesStr = choicesStr.replace("array([", "[").replace("])", "]")
+        
+        # Now parse as a dictionary - handle the format: {'key': [...], 'key': [...]}
+        choicesDict = ast.literal_eval(choicesStr)
+        choicesList = choicesDict['text']
+        
+        questionObj = {
+            'answer': row['answerKey'],
+            'question': row['question'],
+            'choices': choicesList[0]
+        }
+        
+        questions.append(questionObj)
+
+    return questions

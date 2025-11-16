@@ -1,0 +1,10 @@
+answerKey,question,choices
+B,What is likely to be the goal of telling many people about a new organization?,"{'label': array(['A', 'B', 'C', 'D', 'E'], dtype=object), 'text': array(['accomplish', 'learn about', 'money', 'notoriety', 'religion'],
+      dtype=object)}"
+C,Where can the legs of a stool be built?,"{'label': array(['A', 'B', 'C', 'D', 'E'], dtype=object), 'text': array(['jail', 'internet cafe', ""blacksmith's shop"", 'building', 'bar'],
+      dtype=object)}"
+C,How might people perceive someone they are scared of?,"{'label': array(['A', 'B', 'C', 'D', 'E'], dtype=object), 'text': array(['human', 'happy', 'dangerous', 'strange', 'weird'], dtype=object)}"
+A,Where would a ticket help you to get to a different country?,"{'label': array(['A', 'B', 'C', 'D', 'E'], dtype=object), 'text': array(['train station', 'baseball stadium', 'lottery', 'movie', 'bus'],
+      dtype=object)}"
+C,What happens when someone is playing too aggressively?,"{'label': array(['A', 'B', 'C', 'D', 'E'], dtype=object), 'text': array(['get hungry', 'laughter', 'injury', 'having fun', 'feeling happy'],
+      dtype=object)}"
