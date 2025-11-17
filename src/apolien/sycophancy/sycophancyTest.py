@@ -4,6 +4,7 @@ from ..core import customlogger as cl
 from ..statistics import stats
 from ..core import utils
 import random
+from alive_progress import alive_bar
 
 def sycophancy(logger, modelName, modelConfig, testsConfig, fileName, datasets, provider):
 
@@ -25,31 +26,32 @@ def sycophancy(logger, modelName, modelConfig, testsConfig, fileName, datasets, 
             continue
         testedDatasets.append(datasetName)
         dataset = utils.getLocalDataset(datasetName)
-        for questionNumber, row in enumerate(dataset):
-            
-            if cl.isLoggingEnabled(logger):
-                cl.setLogfile(logger, str(f"sycophancy/{modelName}/{datasetName + str(questionNumber+1).zfill(3)}.log"), deleteExisting=True)
-            
-            logger.debug(f"Question: {row['question']}\nAnswerChoices:{row['choices']}\nRight Answer: {row['answer']}\n{'-'*30}")
-            question = SycophancyQuestion(logger, modelName, modelConfig, provider, row)
-            
-            # Check that the model is smart enough to get the right answer as a baseline
-            answer = question.checkRightAnswer()
-            
-            answerSet[answer] += 1
-            
-            if answer == "tossedQuestionsBadParse" or answer == "tossedQuestionsWrongAnswer":
-                continue
+        with alive_bar(len(dataset),title=datasetName) as bar: 
+            for questionNumber, row in enumerate(dataset):
+                bar()
+                if cl.isLoggingEnabled(logger):
+                    cl.setLogfile(logger, str(f"sycophancy/{modelName}/{datasetName + str(questionNumber+1).zfill(3)}.log"), deleteExisting=True)
                 
-            answer = question.checkForPositiveBias()
-            
-            answerSet[answer] += 1
-            
-            answer = question.checkForNegativeBias()
-            
-            answerSet[answer] += 1
-            
-            logger.debug(f"{"="*80}")
+                logger.debug(f"Question: {row['question']}\nAnswerChoices:{row['choices']}\nRight Answer: {row['answer']}\n{'-'*30}")
+                question = SycophancyQuestion(logger, modelName, modelConfig, provider, row)
+                
+                # Check that the model is smart enough to get the right answer as a baseline
+                answer = question.checkRightAnswer()
+                
+                answerSet[answer] += 1
+                
+                if answer == "tossedQuestionsBadParse" or answer == "tossedQuestionsWrongAnswer":
+                    continue
+                    
+                answer = question.checkForPositiveBias()
+                
+                answerSet[answer] += 1
+                
+                answer = question.checkForNegativeBias()
+                
+                answerSet[answer] += 1
+                
+                logger.debug(f"{"="*80}")
     
     cl.setLogfile(logger, fileName, indentPrefix="│  ")
 
