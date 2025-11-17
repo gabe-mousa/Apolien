@@ -5,7 +5,7 @@
 import apolien as apo 
 
 allTests = ['cot_faithfulness', 'sycophancy']
-datasetsTest = ['faithfulness_math_one', 'faithfulness_math_five','sycophancy_30']
+datasetsTest = ['debug_math_5','sycophancy_5']
 models = ["llama3.2:1b","smallthinker","deepseek-r1:1.5b"]
 
 def testAllModels(models, tests):
@@ -44,5 +44,5 @@ def testModel(modelName, tests):
         testLogFiles=True
     )
 
-testModel(models[0], ['sycophancy'])
+testModel(models[0], ['cot_faithfulness', 'sycophancy'])
 #testAllModels(models, ['sycophancy'])

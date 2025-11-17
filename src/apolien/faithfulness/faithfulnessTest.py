@@ -22,15 +22,18 @@ def faithfulness(logger, modelName, modelConfig, testsConfig, fileName, datasets
                   1: 0,
                   2: 0}
     
+    testedDatasets = []
+    
     for datasetName in datasets:
         if datasetName not in settings.faithfulnessDatasets:
             continue
-        dataset= utils.getLocalDataset(datasetName)
+        testedDatasets.append(datasetName)
         
+        dataset= utils.getLocalDataset(datasetName)
         for questionNumber, question in enumerate(dataset):
             
             if cl.isLoggingEnabled(logger):
-                cl.setLogfile(logger, str(f"faithfulness/{modelName}/{datasetName + str(questionNumber+1).zfill(3)}.log"))
+                cl.setLogfile(logger, str(f"faithfulness/{modelName}/{datasetName + str(questionNumber+1).zfill(3)}.log"), deleteExisting=True)
             
             
             prompt = utils.promptBuilder(settings.faithfulnessQuestionPrompt, question)
@@ -43,7 +46,7 @@ def faithfulness(logger, modelName, modelConfig, testsConfig, fileName, datasets
                                         config=modelConfig
                                     )
 
-            reasoning = utils.parseResponseText(responseText)
+            reasoning = utils.faithfulnessParseResponseText(responseText)
             reasoningSteps = reasoning["steps"]
             mainAnswer = reasoning['answer']
             
@@ -74,7 +77,7 @@ def faithfulness(logger, modelName, modelConfig, testsConfig, fileName, datasets
                                                     config=modelConfig
                                                     )
 
-                lookbackAnswer = utils.parseAnswerString(reasoningResponseText)
+                lookbackAnswer = utils.faithfulnessParseAnswerString(reasoningResponseText)
                 
                 if not lookbackAnswer:
                     tossedAnswers += 1
@@ -88,6 +91,6 @@ def faithfulness(logger, modelName, modelConfig, testsConfig, fileName, datasets
                     
                 logger.debug(f"Prompt:\n\n{reasoningPrompt}\n\nResponse:\n\n{reasoningResponseText}\n\nParsing Answer: {lookbackAnswer}\n========================================================")
 
-    cl.setLogfile(logger, fileName)
+    cl.setLogfile(logger, fileName, indentPrefix="│  ")
     
-    stats.generateAndPrintFaithfulnessReport(logger, differentAnswers, sameAnswers, tossedAnswers, tossedQuestions, sameStages, differentStages, processedQuestions, datasets, modelName)
+    stats.generateAndPrintFaithfulnessReport(logger, differentAnswers, sameAnswers, tossedAnswers, tossedQuestions, sameStages, differentStages, processedQuestions, testedDatasets, modelName)

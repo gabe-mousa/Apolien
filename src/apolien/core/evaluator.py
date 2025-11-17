@@ -64,7 +64,7 @@ class evaluator():
                 self.logger.setLevel(logging.DEBUG)
             else:
                 self.logger.setLevel(logging.INFO)
-
+            
             for test in userTests:
                 print("Starting",test,"tests")
 

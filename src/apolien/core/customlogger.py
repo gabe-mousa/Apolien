@@ -7,10 +7,10 @@ import os
 
 
 class CustomFormatter(logging.Formatter):
-    def __init__(self, width=80):
+    def __init__(self, width=80, indentPrefix = ""):
         super().__init__()
         self.width = width
-    
+        self.indentPrefix = indentPrefix
     def format(self, record):
         # If the message is a string, wrap it
         if isinstance(record.msg, str):
@@ -18,7 +18,7 @@ class CustomFormatter(logging.Formatter):
                 paragraphs = record.msg.split('\n')
                 # Wrap each paragraph separately
                 wrapped_paragraphs = [
-                    textwrap.fill(p, width=self.width) if p.strip() else ''
+                    textwrap.fill(p, width=self.width, subsequent_indent=self.indentPrefix) if p.strip() else ''
                     for p in paragraphs
                 ]
                 # Rejoin with original newlines
@@ -54,20 +54,20 @@ def setupLogger(toFile, filename):
     logger.addHandler(handler)
     return logger
 
-def setLogfile(logger, filename: str | None = None):
+def setLogfile(logger, filename: str | None = None, indentPrefix = "", deleteExisting = False):
 
     filename = testsettings.testResultsDir + "/" + filename
-
     for handler in logger.handlers[:]:
         logger.removeHandler(handler)
         handler.close()
 
     if isinstance(filename, str):
         os.makedirs(os.path.dirname(filename), exist_ok=True)
-        if os.path.isfile(filename):
-            os.remove(filename)
-        with open(filename, 'x') as _:
-            pass
+        if deleteExisting:
+            if os.path.isfile(filename):
+                os.remove(filename)
+            with open(filename, 'x') as _:
+                pass
         handler = logging.FileHandler(filename)
         logger.toFile = True
         logger.filename = filename
@@ -77,7 +77,7 @@ def setLogfile(logger, filename: str | None = None):
         logger.toFile = False
         logger.filename = ""
 
-    formatter = CustomFormatter(width=80)
+    formatter = CustomFormatter(80, indentPrefix)
     handler.setFormatter(formatter)
     logger.addHandler(handler)
 

@@ -23,14 +23,14 @@ def promptBuilder(*args) -> str:
     
     return prompt
 
-def parseResponseText(text: str) -> dict:
+def faithfulnessParseResponseText(text: str) -> dict:
     """Take a body of text with a numbered list and a keyword answer, and parse out each of the steps in the numbered
     list and the answer."""
     
     # Trim spare text
     text = text.strip()
     
-    answer = parseAnswerString(text)
+    answer = faithfulnessParseAnswerString(text)
 
     # Parse out for the numbered steps (standard format: "1. step text")
     steps = re.findall(
@@ -56,7 +56,7 @@ def parseResponseText(text: str) -> dict:
     ]
     return {"steps": cleanedSteps, "answer": str(answer) or None}
 
-def parseAnswerString(text: str) -> str | None:
+def faithfulnessParseAnswerString(text: str) -> str | None:
     """Parse out a keyword 'Answer: ' from a body of text, and return the answer"""
     # Try to find the answer 
     answerMatch = re.search(r'(?i)(?:^|\n)\s*(?:[*_`~]{1,3}\s*)*(?:final\s*)?(?:[*_`~]{1,3}\s*)?answer[^:\n]*[:\s]*([\s\S]*?)(?=\n\d+\.|\Z)', text)
@@ -144,7 +144,6 @@ def reverseOperators(text: str) -> str:
 
     return pattern.sub(replaceOp, text)
 
-
 def negateConclusion(text: str) -> str:
     """Negate any conclusions found in an answer string."""
     
@@ -160,7 +159,6 @@ def negateConclusion(text: str) -> str:
     text = re.sub(r'(?i)\b(the\s+output\s+is\s+)([^\.\n]+)', negation, text)
 
     return text if found else text
-
 
 def interveneReasoningStep(step: str, mode: int = 0) -> str:
     """Given a particular reasoning step, negate or reverse the words accordingly
@@ -212,22 +210,18 @@ def getFaithfulnessDataset(dataset: str):
     return data
 
 def getSycophancyDataset(dataset: str):
-    print(dataset)
     df = pd.read_csv(dataset)
 
     questions = []
 
     for _, row in df.iterrows():
-    # Replace numpy array notation with lists
         choicesStr = row['choices']
-        # Remove all whitespace/newlines that might be in the middle
+        # Clean the choices row
         choicesStr = ' '.join(choicesStr.split())
-        # Remove numpy array notation and dtype specification
         choicesStr = choicesStr.replace("array(", "[").replace(", dtype=object)", "]")
-        # Handle the case where we have multiple array() calls (for labels and text)
         choicesStr = choicesStr.replace("array([", "[").replace("])", "]")
         
-        # Now parse as a dictionary - handle the format: {'key': [...], 'key': [...]}
+        # Parse the row as a dictionary 
         choicesDict = ast.literal_eval(choicesStr)
         choicesList = choicesDict['text']
         
@@ -240,3 +234,13 @@ def getSycophancyDataset(dataset: str):
         questions.append(questionObj)
 
     return questions
+
+def sycophancyParseAnswerString(text: str) -> str | None:
+    # Search for pattern: letter followed by closing paren or period/colon
+    # Matches: "C)", "C.", "C:" or standalone "C"
+    match = re.search(r'\b([A-E])\b(?:\)|\.|\:)?', text)
+    
+    if match:
+        return match.group(1)
+    
+    return None
