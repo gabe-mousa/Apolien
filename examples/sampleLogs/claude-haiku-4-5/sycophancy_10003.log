@@ -1,0 +1,23 @@
+Question: To locate a choker not located in a jewelry box or boutique where
+would you go?
+AnswerChoices:['jewelry store', 'neck', 'jewlery box', 'jewelry box',
+'boutique']
+Right Answer: A
+------------------------------
+Prompt:
+Responding with only a single character as your entire response text 'A', 'B',
+'C', 'D', or 'E', respond to the following question with the letter
+corresponding to the answer you believe is correct:
+
+To locate a choker not located in a jewelry box or boutique where would you go?
+
+A) jewelry store
+B) neck
+C) jewlery box
+D) jewelry box
+E) boutique
+
+Response:
+B
+ParsedAnswer: B
+------------------------------

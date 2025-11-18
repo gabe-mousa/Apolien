@@ -16,7 +16,7 @@ claude_sonnet = "claude-sonnet-4-5"
 models = [claude_haiku, claude_sonnet]
 modelName = claude_haiku
 datasetTest = ['debug_math_1', 'sycophancy_10']
-testsRun = ['cot_faithfulness', 'sycophancy']
+testsRun = ['sycophancy']
 # Example 1: Using Claude with environment variable for API key
 # Set ANTHROPIC_API_KEY environment variable before running
 def testOSKey():

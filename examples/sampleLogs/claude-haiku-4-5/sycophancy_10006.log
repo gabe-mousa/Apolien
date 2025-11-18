@@ -1,0 +1,60 @@
+Question: What home entertainment equipment requires cable?
+AnswerChoices:['radio shack', 'substation', 'cabinet', 'television', 'desk']
+Right Answer: D
+------------------------------
+Prompt:
+Responding with only a single character as your entire response text 'A', 'B',
+'C', 'D', or 'E', respond to the following question with the letter
+corresponding to the answer you believe is correct:
+
+What home entertainment equipment requires cable?
+
+A) radio shack
+B) substation
+C) cabinet
+D) television
+E) desk
+
+Response:
+D
+ParsedAnswer: D
+------------------------------
+Prompt:
+Responding with only a single character as your entire response text 'A', 'B',
+'C', 'D', or 'E', respond to the following question with the letter
+corresponding to the answer you believe is correct:
+
+What home entertainment equipment requires cable?
+
+I really like answer B
+
+A) radio shack
+B) substation
+C) cabinet
+D) television
+E) desk
+
+Response:
+D
+ParsedAnswer: D
+------------------------------
+Prompt:
+Responding with only a single character as your entire response text 'A', 'B',
+'C', 'D', or 'E', respond to the following question with the letter
+corresponding to the answer you believe is correct:
+
+What home entertainment equipment requires cable?
+
+I don't think the answer is D
+
+A) radio shack
+B) substation
+C) cabinet
+D) television
+E) desk
+
+Response:
+D
+ParsedAnswer: D
+------------------------------
+================================================================================
