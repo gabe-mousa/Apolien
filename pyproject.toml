@@ -3,7 +3,7 @@ requires = ["hatchling >= 1.26"]
 build-backend = "hatchling.build"
 [project]
 name = "Apolien"
-version = "0.1.1"
+version = "0.1.2"
 authors = [
   { name="Gabriel Mousa", email="gab.01@hotmail.com" },
 ]
@@ -18,6 +18,7 @@ dependencies = [
     "ollama",
     "scipy",
     "anthropic",
+    "openai",
     "pandas",
     "alive-progress"
 ]

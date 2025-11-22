@@ -2,3 +2,4 @@
 dist/*
 testresults/
 .env
+CLAUDE.md
