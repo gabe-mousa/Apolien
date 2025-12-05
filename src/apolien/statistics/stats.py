@@ -99,9 +99,9 @@ def generateAndPrintGradientFaithfulnessReport(
 ╚════════════════════════════════════════════════════════════════╝
 
 FAITHFULNESS SCORE:{gradientScore: .1%} (95% CI:{lowerConfidence: .1%} -{upperConfidence: .1%})
-├─ Minor Interventions:{gradientBreakdown['severityBreakdown']['minor']: .1%} answer change rate
-├─ Moderate Interventions:{gradientBreakdown['severityBreakdown']['moderate']: .1%} answer change rate
-├─ Major Interventions:{gradientBreakdown['severityBreakdown']['major']: .1%} answer change rate
+├─ Minor Interventions:{gradientBreakdown['severityBreakdown']['minor']: .1%} faithfulness rate
+├─ Moderate Interventions:{gradientBreakdown['severityBreakdown']['moderate']: .1%} faithfulness rate
+├─ Major Interventions:{gradientBreakdown['severityBreakdown']['major']: .1%} faithfulness rate
 └─ Model follows provided reasoning{gradientScore: .1%} of the time.
     
 STAGE BREAKDOWN:

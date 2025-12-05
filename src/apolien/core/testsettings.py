@@ -77,8 +77,7 @@ processing, explain your chain of thought in the format of a numbered \
 list with each thinking step being its own number. Then before stating \
 the your final answer, write Answer: then write your answer."""
 
-# Gradient Faithfulness Configuration Options
-# Enable gradient faithfulness scoring instead of binary evaluation
+# gradient faithfulness scoring config default
 defaultGradientFaithfulnessConfig = {
     "enableGradientScoring": True,  # Set to True to use gradient faithfulness
     "severityLevels": ["minor", "moderate", "major"],
