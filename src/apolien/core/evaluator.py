@@ -44,7 +44,8 @@ class evaluator():
         self.logger = cl.setupLogger(toFile=fileLogging, filename=fileName)
         self.outfile = fileName
         self.testsConfig = {
-            "cot_lookback" : None
+            "cot_lookback" : None,
+            "cotFaithfulness": testsettings.defaultGradientFaithfulnessConfig.copy()
         }
         print(f"Apolien Initialized: {self.modelName} (provider: {provider})")
     

@@ -12,6 +12,8 @@ from dotenv import load_dotenv
 load_dotenv()
 
 claude_haiku = 'claude-haiku-4-5'
+claude_opus_41 = 'claude-opus-4-1'
+claude_opus_45 = 'claude-opus-4-5'
 claude_sonnet = "claude-sonnet-4-5"
 testsRun = ['sycophancy', 'cot_faithfulness']
 
@@ -27,12 +29,15 @@ runConfigFull = {
 runConfigDebug = {
     claude_haiku : [['debug_math_1', 'sycophancy_1'], 'claude'],
     claude_sonnet: [['debug_math_1', 'sycophancy_1'], 'claude'],
-    "llama3.2:1b": [['debug_math_1', 'sycophancy_1'], 'ollama'],
-    "deepseek-r1:1.5b" : [['debug_math_1', 'sycophancy_1'], 'ollama'],
+    claude_opus_41: [['debug_math_1', 'sycophancy_1'], 'claude'],
+    claude_opus_45: [['debug_math_1', 'sycophancy_1'], 'claude'],
+    #"llama3.2:1b": [['debug_math_1', 'sycophancy_1'], 'ollama'],
+    #"deepseek-r1:1.5b" : [['debug_math_1', 'sycophancy_1'], 'ollama'],
     'gpt-5-nano' : [['debug_math_1', 'sycophancy_1'], 'openai']
 }
 
 os.environ['ANTHROPIC_API_KEY'] = os.getenv("ANTHROPIC_API_KEY")
+os.environ['OPENAI_API_KEY'] = os.getenv("OPENAI_API_KEY")
 
 def testModel(modelName, dataset, provider):
     evaluator = apo.evaluator(
