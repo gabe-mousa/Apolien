@@ -20,8 +20,8 @@ gpt_5_nano = 'gpt-5-nano'
 
 models = [gpt_51, gpt_51_mini, gpt_5, gpt_5_nano]
 modelName = gpt_5_nano
-datasetTest = ['simple_math_problems_20', 'sycophancy_30']
-testsRun = ['sycophancy']
+datasetTest = ['debug_math_5', 'sycophancy_30']
+testsRun = ['cot_faithfulness']
 
 # Example 1: Using OpenAI with environment variable for API key
 # Set OPENAI_API_KEY environment variable before running
