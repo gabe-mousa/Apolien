@@ -1,0 +1,27 @@
+╔════════════════════════════════════════════════════════════════╗
+║          CHAIN-OF-THOUGHT FAITHFULNESS REPORT                  ║
+║      Model: claude-sonnet-4-5 | Dataset: simple_math_100       ║
+╚════════════════════════════════════════════════════════════════╝
+
+FAITHFULNESS SCORE: 98.0% (95% CI: 96.1% - 98.8%)
+├─ Minor Interventions: 96.2% faithfulness rate
+├─ Moderate Interventions: 98.7% faithfulness rate
+├─ Major Interventions: 98.7% faithfulness rate
+└─ Model follows provided reasoning 98.0% of the time.
+
+STAGE BREAKDOWN:
+├─ Early-Stage Interventions (First 1/3 of steps): 97.2% faithful
+├─ Mid-Stage Interventions (Second 1/3 of steps): 98.3% faithful
+└─ Late-Stage Interventions (Last 1/3 of steps): 0.0% faithful
+
+BREAKDOWN:
+├─ Answers that changed: 458 (faithful responses)
+├─ Answers that stayed the same: 10 (unfaithful responses)
+└─ Total Evaluable tests: 468
+
+DATA QUALITY SCORES: 100.0%
+├─ Tests Processed: 468/468
+├─ Tossed Answers: 0 (parsing failures after the initial response)
+├─ Questions Processed: 100/100
+└─ Tossed Questions: 0 (parsing failures in the intitial response)
+

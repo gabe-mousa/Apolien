@@ -15,15 +15,36 @@ claude_haiku = 'claude-haiku-4-5'
 claude_opus_41 = 'claude-opus-4-1'
 claude_opus_45 = 'claude-opus-4-5'
 claude_sonnet = "claude-sonnet-4-5"
-testsRun = ['sycophancy', 'cot_faithfulness']
+gpt_5_nano = "gpt-5-nano"
+gpt_51 = "gpt-5.1"
+gpt_5_mini = "gpt-5-mini"
+testsRun = ['cot_faithfulness']
 
 runConfigFull = {
-    claude_haiku : [['sycophancy_1000'], 'claude'],
-    claude_sonnet: [['sycophancy_1000'], 'claude'],
-    "llama3.2:1b": [['sycophancy_100'], 'ollama'],
-    "deepseek-r1:1.5b" : [['sycophancy_100'], 'ollama'],
-    'smallthinker' : [['sycophancy_30'], 'ollama'],
-    'gpt-5-nano' : [['sycophancy_1000'], 'openai']
+    claude_haiku : [['simple_math_100','sycophancy_1000'], 'claude'],
+    claude_sonnet: [['simple_math_100','sycophancy_1000'], 'claude'],
+    claude_opus_45: [['simple_math_100','sycophancy_1000'], 'claude'],
+    claude_opus_41: [['simple_math_100','sycophancy_1000'], 'claude'],
+    #"llama3.2:1b": [['simple_math_100','sycophancy_100'], 'ollama'],
+    #"deepseek-r1:1.5b" : [['simple_math_100','sycophancy_100'], 'ollama'],
+    #'smallthinker' : [['simple_math_100','sycophancy_30'], 'ollama'],
+    gpt_5_nano : [['simple_math_100','sycophancy_1000'], 'openai'],
+    gpt_51: [['simple_math_100','sycophancy_1000'], 'openai'],
+    gpt_5_mini: [['simple_math_100','sycophancy_1000'], 'openai']
+}
+
+openAITemp = {
+    # claude_haiku : [['simple_math_100','sycophancy_1000'], 'claude'],
+    # claude_sonnet: [['simple_math_100','sycophancy_1000'], 'claude'],
+    # claude_opus_45: [['simple_math_100','sycophancy_1000'], 'claude'],
+    # claude_opus_41: [['simple_math_100','sycophancy_1000'], 'claude'],
+    #"llama3.2:1b": [['simple_math_100','sycophancy_100'], 'ollama'],
+    #"deepseek-r1:1.5b" : [['simple_math_100','sycophancy_100'], 'ollama'],
+    #'smallthinker' : [['simple_math_100','sycophancy_30'], 'ollama'],
+    # gpt_5_nano : [['simple_math_100','sycophancy_1000'], 'openai'],
+    # gpt_51: [['simple_math_100','sycophancy_1000'], 'openai'],
+    #"deepseek-r1:1.5b" : [['simple_math_100','sycophancy_100'], 'ollama'],
+    gpt_5_mini: [['simple_math_100','sycophancy_1000'], 'openai']
 }
 
 runConfigDebug = {
@@ -56,5 +77,8 @@ def testModel(modelName, dataset, provider):
         testLogFiles=False
     )
 
-for model in runConfigDebug:
-    testModel(model, runConfigDebug[model][0], runConfigDebug[model][1])
+# for model in runConfigDebug:
+#     testModel(model, runConfigDebug[model][0], runConfigDebug[model][1])
+
+for model in openAITemp:
+    testModel(model, openAITemp[model][0], openAITemp[model][1])
